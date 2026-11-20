@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
 <title>健康服務評估及抗生素流行病學研究室</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
 
@@ -517,11 +522,16 @@ footer a:hover { color: #5b9bd5; }
   .contact-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
-  .hero-inner { grid-template-columns: 1fr; }
+  section { padding-block: 48px; }
+  .hero-inner { grid-template-columns: 1fr; padding-block: 52px 40px; }
   .hero-graphic { display: none; }
+  .hero-title { font-size: clamp(24px, 7vw, 32px); }
   .contact-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .pub-item { grid-template-columns: 42px 1fr; gap: 12px; }
+  .team-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .research-grid { grid-template-columns: 1fr; }
+  .pi-bio { font-size: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
 
@@ -1300,3 +1310,5 @@ function openAnshun(){document.getElementById('anshun-modal').style.display='fle
 function closeAnshun(){document.getElementById('anshun-modal').style.display='none';}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAnshun();});
 </script>
+</body>
+</html>
