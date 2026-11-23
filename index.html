@@ -27,12 +27,15 @@ a{color:#B42A23}a:hover{color:#8E1F1A}
 .xb ul{list-style:none}
 .xb address{font-style:normal}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+:root{scroll-padding-top:96px}
 .nav{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:2px solid #222222}
 .nav-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;flex-wrap:wrap;padding-block:8px}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#222222;font-weight:900;font-size:14.5px;line-height:1.3}
 .nav-logo:hover{color:#222222}
 .nav-logo img{width:44px;height:auto}
 .nav-links{display:flex;gap:4px;flex-wrap:wrap}
+.nav-scroll{position:relative}
+.nav-arrow{display:none}
 .nav-links a{color:#222222;text-decoration:none;font-size:13.5px;font-weight:800;padding:8px 13px;border-radius:999px;border:2px solid transparent;min-height:40px;display:inline-flex;align-items:center}
 .nav-links a:hover{border-color:#222222;color:#222222;background:#FBF8F1}
 .sec{padding:96px 0;position:relative}
@@ -86,7 +89,7 @@ a{color:#B42A23}a:hover{color:#8E1F1A}
 .authors strong{color:#222222}
 .journal{font-size:13px;font-weight:800;color:#1B5751}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
-.sub-label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:900;letter-spacing:.1em;color:#FFFFFF;background:#B42A23;border:2px solid #222222;border-radius:999px;padding:4px 16px;margin-bottom:16px}
+.sub-label{display:flex;width:fit-content;align-items:center;justify-content:center;text-align:center;gap:8px;font-size:13px;font-weight:900;letter-spacing:.1em;color:#FFFFFF;background:#B42A23;border:2px solid #222222;border-radius:999px;padding:6px 28px;margin:0 0 1em}
 .g-table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
 .g-table th{text-align:left;padding:14px 16px;font-size:12px;font-weight:900;letter-spacing:.1em;color:#5E5A55;border-bottom:3px solid #222222;white-space:nowrap}
 .g-table td{padding:18px 16px;border-bottom:2px dashed #D9D4C9;vertical-align:top;line-height:1.6}
@@ -123,7 +126,19 @@ a{color:#B42A23}a:hover{color:#8E1F1A}
 @media (max-width:640px){
 .sec{padding:64px 0}
 .title{font-size:28px}
-.nav-links{flex-wrap:nowrap;overflow-x:auto;width:100%}
+.nav-row{min-height:0;gap:6px;padding-block:8px 4px}
+.nav-logo{font-size:13px;gap:8px}
+.nav-logo img,.nav-logo svg{width:38px !important}
+.nav-links{flex-wrap:nowrap;overflow-x:auto;width:100%;gap:2px;margin-inline:calc(24px * -1);padding:0 24px 6px;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 24px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 24px),transparent 100%)}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-scroll{width:100%}
+.nav-arrow{position:absolute;top:calc(50% - 3px);transform:translateY(-50%);z-index:2;width:28px;height:28px;padding:0 0 3px;border:2px solid #222222;border-radius:50%;background:#FFFFFF;color:#222222;font-size:20px;font-weight:900;line-height:1;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 0 #222222;animation:navNudge 1.4s ease-in-out infinite}
+.nav-arrow:not([hidden]){display:inline-flex}
+.nav-prev{left:-14px;--d:-3px}
+.nav-next{right:-14px;--d:3px}
+@keyframes navNudge{0%,100%{margin-inline-start:0}50%{margin-inline-start:var(--d)}}
+@media (prefers-reduced-motion:reduce){.nav-arrow{animation:none}}
+.nav-links a{flex:0 0 auto;scroll-snap-align:start;white-space:nowrap;font-size:13px;padding:6px 12px;min-height:36px}
 .pub-wrap{padding:4px 18px}
 .pub-item{grid-template-columns:minmax(0,1fr);gap:8px}
 .pub-year{width:68px}
@@ -163,6 +178,8 @@ body.modal-open{overflow:hidden}
 <path d="M130 116 L130 124 M108 118 Q119 136 130 124 Q141 136 152 118"></path>
 </g>
 </svg><span>健康服務評估<span style="color: #B42A23">及抗生素流行病學</span>研究室</span></a>
+    <div class="nav-scroll">
+      <button class="nav-arrow nav-prev" type="button" aria-label="向左捲動選單" hidden>&#8249;</button>
     <div class="nav-links">
       <a href="#about">關於 PI</a>
       <a href="#research">研究方向</a>
@@ -171,6 +188,8 @@ body.modal-open{overflow:hidden}
       <a href="#grants">研究計畫</a>
       <a href="#news">媒體報導</a>
       <a href="#contact">聯絡我們</a>
+    </div>
+      <button class="nav-arrow nav-next" type="button" aria-label="向右捲動選單" hidden>&#8250;</button>
     </div>
   </div>
 </nav>
@@ -444,7 +463,7 @@ body.modal-open{overflow:hidden}
     <h2 class="title">Research output</h2>
     <p class="desc">完整發表清單請見 <a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener" style="font-weight: 800">ResearchGate 個人頁面</a>。</p>
 
-    <p class="sub-label">第一作者論文</p>
+    <p class="sub-label" style="margin-bottom: 1em;width: 120px;padding: 5px;"> 第一作者論文 </p>
     <div class="card pub-wrap" style="margin-bottom: 44px">
       <div class="pub-item">
         <span class="pub-year">2024</span>
@@ -487,7 +506,7 @@ body.modal-open{overflow:hidden}
       </div>
     </div>
 
-    <p class="sub-label" style="background: #1B5751">共同作者論文</p>
+    <p class="sub-label" style="background: #1B5751;margin-bottom: 1em;width: 120px;padding: 5px;">共同作者論文</p>
     <div class="card pub-wrap">
       <div class="pub-item">
         <span class="pub-year">2026</span>
@@ -770,6 +789,18 @@ body.modal-open{overflow:hidden}
 function openModal(k){var m=document.getElementById('modal-'+k);if(!m)return;closeModal();m.hidden=false;document.body.classList.add('modal-open');var b=m.querySelector('.a-close');if(b)b.focus();}
 function closeModal(){document.querySelectorAll('.overlay').forEach(function(m){m.hidden=true;});document.body.classList.remove('modal-open');}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+</script>
+<script>
+(function(){
+var sc=document.querySelector('.nav-links'),pv=document.querySelector('.nav-prev'),nx=document.querySelector('.nav-next');
+if(!sc||!pv||!nx)return;
+function upd(){var m=sc.scrollWidth-sc.clientWidth;pv.hidden=sc.scrollLeft<=4;nx.hidden=m<=4||sc.scrollLeft>=m-4;}
+pv.addEventListener('click',function(){sc.scrollBy({left:-sc.clientWidth*.6,behavior:'smooth'})});
+nx.addEventListener('click',function(){sc.scrollBy({left:sc.clientWidth*.6,behavior:'smooth'})});
+sc.addEventListener('scroll',upd,{passive:true});
+window.addEventListener('resize',upd);
+upd();
+})();
 </script>
 </body>
 </html>
