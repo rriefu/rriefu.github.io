@@ -1,834 +1,2258 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-<meta charset="utf-8">
-<title>健康服務評估及抗生素流行病學研究室</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="健康服務評估及抗生素流行病學研究室">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="健康服務評估及抗生素流行病學研究室">
-<meta property="og:title" content="健康服務評估及抗生素流行病學研究室">
-<meta property="og:description" content="抗生素使用、抗藥性與長期健康影響大型資料庫流行病學研究">
-<meta property="og:url" content="https://rriefu.github.io/">
-<meta property="og:image" content="https://rriefu.github.io/download.jpeg">
-<meta property="og:image:alt" content="研究室吉祥物-小白">
-<meta property="og:locale" content="zh_TW">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="健康服務評估及抗生素流行病學研究室">
-<meta name="twitter:description" content="抗生素使用、抗藥性與長期健康影響大型資料庫流行病學研究">
-<meta name="twitter:image" content="https://rriefu.github.io/download.jpeg">
-<link rel="icon" href="favicon.ico" sizes="32x32">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap">
-<style>
-body{margin:0}
-a{color:#B42A23}a:hover{color:#8E1F1A}
-.xb{font-family:'Nunito','Noto Sans TC',sans-serif;color:#222222;background:#FBF8F1;font-size:15px;line-height:1.8;scroll-behavior:smooth}
-.xb *{box-sizing:border-box}
-.xb p,.xb h1,.xb h2,.xb h3,.xb h4,.xb ul,.xb address{margin:0;padding:0}
-.xb ul{list-style:none}
-.xb address{font-style:normal}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-:root{scroll-padding-top:96px}
-.nav{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:2px solid #222222}
-.nav-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;flex-wrap:wrap;padding-block:8px}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#222222;font-weight:900;font-size:14.5px;line-height:1.3}
-.nav-logo:hover{color:#222222}
-.nav-logo img{width:44px;height:auto}
-.nav-links{display:flex;gap:4px;flex-wrap:wrap}
-.nav-scroll{position:relative}
-.nav-arrow{display:none}
-.nav-links a{color:#222222;text-decoration:none;font-size:13.5px;font-weight:800;padding:8px 13px;border-radius:999px;border:2px solid transparent;min-height:40px;display:inline-flex;align-items:center}
-.nav-links a:hover{border-color:#222222;color:#222222;background:#FBF8F1}
-.sec{padding:96px 0;position:relative}
-.label{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:900;letter-spacing:.14em;color:#B42A23;margin-bottom:8px}
-.label img{width:34px;height:auto}
-.title{font-size:36px;font-weight:900;letter-spacing:-.01em;line-height:1.25;margin-bottom:12px}
-.desc{color:#5E5A55;max-width:680px;margin-bottom:44px;font-size:15px}
-.card{background:#FFFFFF;border:2px solid #222222;border-radius:26px;box-shadow:5px 5px 0 #222222}
-.hoverlift{transition:transform .2s, box-shadow .2s}
-.hoverlift:hover{transform:translate(-2px,-3px);box-shadow:8px 8px 0 #222222}
-.badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:800;padding:7px 14px;border-radius:999px;background:#FFFFFF;border:2px solid #222222}
-.badge img{width:14px;height:14px;opacity:.85}
-.chip{display:inline-flex;align-items:center;font-size:13px;font-weight:700;padding:6px 15px;border-radius:999px;background:#DDF1EE;color:#1B5751;border:2px solid #222222}
-.tag{display:inline-flex;align-items:center;font-size:11.5px;font-weight:800;padding:3px 11px;border-radius:999px;background:#F1EEE6;color:#3D3A36}
-.tag-red{background:#FBE3E1;color:#9A231D}
-.scite{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:800;color:#1B5751;text-decoration:none;padding:3px 11px;border:2px solid #1B5751;border-radius:999px}
-.scite:hover{background:#DDF1EE;color:#1B5751}
-.press{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:12.5px;font-weight:800;color:#9A231D;text-decoration:none;padding:5px 13px;border:2px solid #9A231D;border-radius:999px;background:#FFFFFF}
-.press:hover{background:#FBE3E1;color:#9A231D}
-.ext{width:1em;height:1em;flex:none;transform:rotate(-45deg);fill:currentColor}
-.ext use:last-child{transform:translateX(-560px)}
-.about-grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:56px;align-items:start}
-.about-body h3{font-size:20px;font-weight:900;margin:40px 0 16px;display:flex;align-items:center;gap:10px}
-.about-body h3 img{width:18px;height:18px}
-.about-body p{margin-bottom:18px;line-height:1.95}
-.about-body strong{background:linear-gradient(transparent 62%, #FBE3E1 62%);font-weight:800}
-.tl{display:flex;flex-direction:column;gap:0;border-left:3px dashed #222222;margin-left:8px}
-.tl li{position:relative;padding:0 0 18px 26px}
-.tl li:last-child{padding-bottom:0}
-.tl-dot{position:absolute;left:-10px;top:5px;width:17px;height:17px;border-radius:50%;background:#FFFFFF;border:3px solid #222222}
-.tl-year{font-size:12.5px;font-weight:900;color:#B42A23;font-variant-numeric:tabular-nums;letter-spacing:.04em}
-.tl-main{font-weight:800;font-size:14.5px;line-height:1.5}
-.tl-sub{font-size:12.5px;color:#5E5A55;line-height:1.55;margin-top:2px}
-.r-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-.r-icon{width:52px;height:52px;border-radius:18px;border:2px solid #222222;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-.r-icon svg{width:26px;height:26px;overflow:visible}
-.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:26px}
-.m-frame{overflow:hidden;border-bottom:2px solid #222222;border-radius:24px 24px 0 0}
-.m-photo{width:100%;height:230px;object-fit:cover;display:block}
-.m-name{font-family:'Noto Sans TC',sans-serif;font-size:18px;font-weight:900;line-height:1.4}
-.m-btn{font:inherit;font-family:'Noto Sans TC',sans-serif;font-size:18px;font-weight:900;color:#222222;background:none;border:0;padding:0 0 1px;border-bottom:3px dotted #B42A23;cursor:pointer;line-height:1.4;min-height:30px}
-.m-btn:hover{color:#B42A23}
-.m-hint{display:inline-flex;margin-left:8px;font-size:11px;font-weight:800;color:#9A231D;background:#FBE3E1;border-radius:999px;padding:1px 8px;vertical-align:middle}
-.m-role{font-size:12.5px;font-weight:700;color:#5E5A55}
-.m-note{font-size:12.5px;color:#4E4A45;line-height:1.7;border-top:2px dashed #D9D4C9;padding-top:12px;margin-top:12px}
-.pub-wrap{padding:8px 32px}
-.pub-item{display:grid;grid-template-columns:76px minmax(0,1fr);gap:22px;padding:24px 0;border-bottom:2px dashed #D9D4C9;align-items:start}
-.pub-item:last-child{border-bottom:0}
-.pub-year{display:inline-flex;justify-content:center;font-size:12.5px;font-weight:900;color:#FFFFFF;background:#222222;border-radius:999px;padding:3px 0;font-variant-numeric:tabular-nums;margin-top:2px}
-.pub-body h4{font-size:15px;font-weight:800;line-height:1.55;margin-bottom:5px}
-.pub-body h4 a{color:#222222;text-decoration:none}
-.pub-body h4 a:hover{color:#B42A23;text-decoration:underline}
-.authors{font-size:13px;color:#5E5A55;font-style:italic;margin-bottom:4px}
-.authors strong{color:#222222}
-.journal{font-size:13px;font-weight:800;color:#1B5751}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
-.sub-label{display:flex;width:fit-content;align-items:center;justify-content:center;text-align:center;gap:8px;font-size:13px;font-weight:900;letter-spacing:.1em;color:#FFFFFF;background:#B42A23;border:2px solid #222222;border-radius:999px;padding:6px 28px;margin:0 0 1em}
-.more-btn{box-shadow:4px 4px 0 #222222}
-.g-table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
-.g-table th{text-align:left;padding:14px 16px;font-size:12px;font-weight:900;letter-spacing:.1em;color:#5E5A55;border-bottom:3px solid #222222;white-space:nowrap}
-.g-table td{padding:18px 16px;border-bottom:2px dashed #D9D4C9;vertical-align:top;line-height:1.6}
-.g-table tr:last-child td{border-bottom:0}
-.pi-tag{display:inline-block;font-size:11.5px;font-weight:900;padding:3px 12px;border-radius:999px;background:#FFFFFF;border:2px solid #B42A23;color:#9A231D}
-.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.c-block{border:2px solid #4A4743;border-radius:22px;padding:24px}
-.c-block h4{font-size:12.5px;font-weight:900;letter-spacing:.14em;color:#F4ABA5;margin-bottom:12px}
-.c-block p,.c-block a{color:#EDEAE3;font-size:14.5px;line-height:1.85;text-decoration:none}
-.c-block a:hover{color:#FFFFFF;text-decoration:underline}
-.overlay{position:fixed;inset:0;z-index:9000;background:rgba(20,18,16,.74);display:flex;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto}
-.a-card{background:#FFFFFF;border:2px solid #222222;border-radius:28px;box-shadow:6px 6px 0 #222222;max-width:760px;width:100%;padding:40px 38px 34px;position:relative;margin:auto;line-height:1.6}
-.a-close{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:2px solid #222222;background:#FFFFFF;cursor:pointer;color:#222222;display:flex;align-items:center;justify-content:center;padding:0}
-.a-close svg{width:20px;height:20px;overflow:visible;fill:currentColor}
-.a-close:hover{background:#FBE3E1}
-.a-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:26px;padding-right:48px}
-.a-head img{width:64px;height:auto;flex-shrink:0}
-.a-title{font-size:17px;font-weight:900;line-height:1.55;margin-bottom:6px}
-.a-sub{font-size:12.5px;color:#5E5A55}
-.a-sec{display:flex;gap:16px;margin-bottom:20px;padding-bottom:20px;border-bottom:2px dashed #D9D4C9}
-.a-sec:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
-.a-icon{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:2px solid #222222;display:flex;align-items:center;justify-content:center}
-.a-icon img{width:28px;height:auto}
-.a-body h4{font-size:13px;font-weight:900;letter-spacing:.06em;margin-bottom:8px;color:#9A231D}
-.a-body p{font-size:13.5px;color:#4E4A45;line-height:1.9}
-.a-kw{display:flex;flex-wrap:wrap;gap:6px}
-.poster-img{max-width:min(94vw,900px);max-height:90vh;border-radius:16px;border:3px solid #FFFFFF;display:block;margin:auto}
-.paws{display:flex;gap:26px;opacity:.12}
-.paws img{width:30px;height:30px}
-@media (max-width:900px){
-.about-grid{grid-template-columns:minmax(0,1fr)}
-.hero-grid{grid-template-columns:minmax(0,1fr) !important}
-.contact-grid{grid-template-columns:minmax(0,1fr)}
+  <meta charset="utf-8">
+  <title>健康服務評估及抗生素流行病學研究室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="健康服務評估及抗生素流行病學研究室">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="健康服務評估及抗生素流行病學研究室">
+  <meta property="og:title" content="健康服務評估及抗生素流行病學研究室">
+  <meta property="og:description" content="抗生素使用、抗藥性與長期健康影響大型資料庫流行病學研究">
+  <meta property="og:url" content="https://rriefu.github.io/">
+  <meta property="og:image" content="https://rriefu.github.io/download.jpeg">
+  <meta property="og:image:alt" content="研究室吉祥物-小白">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="健康服務評估及抗生素流行病學研究室">
+  <meta name="twitter:description" content="抗生素使用、抗藥性與長期健康影響大型資料庫流行病學研究">
+  <meta name="twitter:image" content="https://rriefu.github.io/download.jpeg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rriefu.github.io/#website",
+      "url": "https://rriefu.github.io/",
+      "name": "健康服務評估及抗生素流行病學研究室",
+      "inLanguage": "zh-TW",
+      "publisher": { "@id": "https://rriefu.github.io/#lab" }
+    },
+    {
+      "@type": ["ResearchOrganization", "Organization"],
+      "@id": "https://rriefu.github.io/#lab",
+      "name": "健康服務評估及抗生素流行病學研究室",
+      "url": "https://rriefu.github.io/",
+      "description": "本研究室運用大型醫療資料庫與流行病學方法，評估基層醫療抗生素合理使用及其長期健康影響，探討不同族群如高齡者及孕婦之抗生素暴露風險與健康預後，並建立以風險為基礎的抗生素處方決策策略，以因應全球抗藥性公衛威脅。",
+      "logo": "https://rriefu.github.io/favicon.svg",
+      "image": "https://rriefu.github.io/images/mascot-standee.png",
+      "parentOrganization": { "@id": "https://rriefu.github.io/#school" },
+      "address": { "@type": "PostalAddress", "streetAddress": "民權東路六段161號 R4211", "addressLocality": "內湖區", "addressRegion": "台北市", "postalCode": "114", "addressCountry": "TW" },
+      "contactPoint": { "@type": "ContactPoint", "contactType": "合作與加入", "email": "yang@mail.ndmctsgh.edu.tw", "telephone": "+886-2-8792-3100 ext. 18443" },
+      "knowsAbout": ["大型資料庫流行病學方法", "抗生素合理使用與長期健康影響", "抗生素暴露與母嬰健康", "風險為基礎的抗生素處方策略", "高齡化抗生素使用挑戰", "Antimicrobial Resistance", "Maternal and Child Health", "Risk-based Antibiotic Prescribing", "Antibiotic Stewardship"],
+      "member": { "@id": "https://rriefu.github.io/#pi" }
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://rriefu.github.io/#school",
+      "name": "公共衛生學院",
+      "alternateName": "School of Public Health",
+      "parentOrganization": { "@id": "https://rriefu.github.io/#ndmc" }
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://rriefu.github.io/#ndmc",
+      "name": "國防醫學大學",
+      "alternateName": "National Defense Medical Center"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rriefu.github.io/#pi",
+      "name": "楊雅婷",
+      "alternateName": ["Ya-Ting Yang", "Yang YT"],
+      "honorificSuffix": "PhD",
+      "jobTitle": "助理教授",
+      "url": "https://rriefu.github.io/#about",
+      "image": "https://rriefu.github.io/images/pi-yang.png",
+      "worksFor": { "@id": "https://rriefu.github.io/#school" },
+      "memberOf": { "@id": "https://rriefu.github.io/#lab" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of Manchester", "address": { "@type": "PostalAddress", "addressCountry": "GB" } },
+        { "@id": "https://rriefu.github.io/#ndmc" }
+      ],
+      "knowsAbout": ["大型資料庫流行病學方法", "抗生素合理使用與長期健康影響", "抗生素暴露與母嬰健康", "風險為基礎的抗生素處方策略", "高齡化抗生素使用挑戰", "Antimicrobial Resistance", "Maternal and Child Health", "Risk-based Antibiotic Prescribing", "Antibiotic Stewardship"],
+      "sameAs": ["https://www.researchgate.net/profile/Ya-Ting-Yang-8"]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Exploring Prior Antibiotic Exposure Characteristics for COVID-19 Hospital Admission Patients: OpenSAFELY",
+      "url": "https://doi.org/10.3390/antibiotics13060566",
+      "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.3390/antibiotics13060566" },
+      "datePublished": "2024",
+      "isPartOf": { "@type": "Periodical", "name": "Antibiotics (Basel)" },
+      "author": [{ "@id": "https://rriefu.github.io/#pi" }, { "@type": "Person", "name": "Wong D" }, { "@type": "Person", "name": "Zhong X" }, { "@type": "Person", "name": "Fahmi A" }, { "@type": "Person", "name": "Ashcroft DM" }, { "@type": "Person", "name": "Hand K" }]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Repeated antibiotic exposure and risk of hospitalisation and death following COVID-19 infection (OpenSAFELY): a matched case–control study",
+      "url": "https://doi.org/10.1016/j.eclinm.2023.102064",
+      "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.1016/j.eclinm.2023.102064" },
+      "datePublished": "2023",
+      "isPartOf": { "@type": "Periodical", "name": "eClinicalMedicine" },
+      "author": [{ "@id": "https://rriefu.github.io/#pi" }, { "@type": "Person", "name": "Wong D" }, { "@type": "Person", "name": "Ashcroft D" }],
+      "subjectOf": { "@type": "NewsArticle", "headline": "Study links overuse of antibiotics with severe COVID-19 side effects", "url": "https://www.manchester.ac.uk/about/news/study-links-overuse-of-antibiotics-with-severe-covid-19-side-effects/", "datePublished": "2023-07-05", "publisher": { "@type": "Organization", "name": "University of Manchester" } }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The impact of the COVID-19 pandemic on the treatment of common infections in primary care and the change to antibiotic prescribing in England",
+      "url": "https://doi.org/10.1186/s13756-023-01280-6",
+      "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.1186/s13756-023-01280-6" },
+      "datePublished": "2023",
+      "isPartOf": { "@type": "Periodical", "name": "Antimicrobial Resistance & Infection Control" },
+      "author": [{ "@id": "https://rriefu.github.io/#pi" }, { "@type": "Person", "name": "Zhong X" }, { "@type": "Person", "name": "Fahmi A" }]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Arrhythmia and cardiomyopathy risk in Taiwan with complementary biobank evidence on thyroid genetic susceptibility: an integrative population-based framework",
+      "datePublished": "2026",
+      "isPartOf": { "@type": "Periodical", "name": "Endocrine Connections" },
+      "author": [{ "@type": "Person", "name": "Lin YC" }, { "@type": "Person", "name": "Huang YC" }, { "@id": "https://rriefu.github.io/#pi" }, { "@type": "Person", "name": "Chuang SW" }, { "@type": "Person", "name": "Weng TH" }, { "@type": "Person", "name": "Tsai CT" }]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Antibiotics for common infections in primary care before, during and after the COVID-19 pandemic: cohort study of extent of prescribing based on risks of infection-related hospital admissions",
+      "datePublished": "2025",
+      "isPartOf": { "@type": "Periodical", "name": "Journal of the Royal Society of Medicine" },
+      "author": [{ "@type": "Person", "name": "Fahmi A" }, { "@id": "https://rriefu.github.io/#pi" }, { "@type": "Person", "name": "Zhong X" }, { "@type": "Person", "name": "Pate A" }]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Evaluation of the impact of COVID-19 pandemic on hospital admission related to common infections",
+      "url": "https://doi.org/10.1371/journal.pone.0311515",
+      "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.1371/journal.pone.0311515" },
+      "datePublished": "2024",
+      "isPartOf": { "@type": "Periodical", "name": "PLoS ONE" },
+      "author": [{ "@type": "Person", "name": "Fahmi A" }, { "@type": "Person", "name": "Palin V" }, { "@type": "Person", "name": "Zhong X" }, { "@id": "https://rriefu.github.io/#pi" }]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Impact of COVID-19 on broad-spectrum antibiotic prescribing for common infections in primary care in England: a time-series analyses using OpenSAFELY and effects of predictors including deprivation",
+      "url": "https://doi.org/10.1016/j.lanepe.2023.100653",
+      "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.1016/j.lanepe.2023.100653" },
+      "datePublished": "2023",
+      "isPartOf": { "@type": "Periodical", "name": "The Lancet Regional Health – Europe" },
+      "author": [{ "@type": "Person", "name": "Zhong X" }, { "@type": "Person", "name": "Pate A" }, { "@id": "https://rriefu.github.io/#pi" }, { "@type": "Person", "name": "Fahmi A" }, { "@type": "Person", "name": "Ashcroft DM" }, { "@type": "Person", "name": "Goldacre B" }]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The impact of COVID-19 on antibiotic prescribing in primary care in England: Evaluation and risk prediction of appropriateness of type and repeat prescribing",
+      "url": "https://doi.org/10.1016/j.jinf.2023.05.010",
+      "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.1016/j.jinf.2023.05.010" },
+      "datePublished": "2023",
+      "isPartOf": { "@type": "Periodical", "name": "Journal of Infection" },
+      "author": [{ "@type": "Person", "name": "Zhong X" }, { "@type": "Person", "name": "Pate A" }, { "@id": "https://rriefu.github.io/#pi" }, { "@type": "Person", "name": "Fahmi A" }, { "@type": "Person", "name": "Ashcroft DM" }, { "@type": "Person", "name": "Goldacre B" }]
+    }
+  ]
 }
-@media (max-width:640px){
-.sec{padding:64px 0}
-.title{font-size:28px}
-.nav-row{min-height:0;gap:6px;padding-block:8px 4px}
-.nav-logo{font-size:13px;gap:8px}
-.nav-logo img,.nav-logo svg{width:38px !important}
-.nav-links{flex-wrap:nowrap;overflow-x:auto;width:100%;gap:2px;margin-inline:calc(24px * -1);padding:0 24px 6px;scroll-snap-type:x proximity;scroll-padding-inline:24px;scrollbar-width:none;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 24px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 24px),transparent 100%)}
-.nav-links::-webkit-scrollbar{display:none}
-.nav-scroll{width:100%}
-.nav-arrow{position:absolute;top:calc(50% - 3px);transform:translateY(-50%);z-index:2;width:28px;height:28px;padding:0;border:2px solid #222222;border-radius:50%;background:#FFFFFF;color:#222222;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 0 #222222;animation:navNudge 1.4s ease-in-out infinite}
-.nav-arrow:not([hidden]){display:inline-flex}
-.nav-arrow svg{width:10px;height:16px;overflow:visible}
-.nav-prev{left:-14px;--d:-3px}
-.nav-next{right:-14px;--d:3px}
-@keyframes navNudge{0%,100%{margin-inline-start:0}50%{margin-inline-start:var(--d)}}
-@media (prefers-reduced-motion:reduce){.nav-arrow{animation:none}}
-.nav-links a{flex:0 0 auto;scroll-snap-align:start;white-space:nowrap;font-size:13px;padding:6px 12px;min-height:36px}
-.pub-wrap{padding:4px 18px}
-.pub-item{grid-template-columns:minmax(0,1fr);gap:8px}
-.pub-year{width:68px}
-.a-card{padding:32px 20px 24px}
-.hero-title{font-size:30px !important}
-}
-.xb-head{transform-box:view-box;transform-origin:130px 196px;animation:xbHead 2.8s ease-in-out infinite}
-@keyframes xbHead{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
-.xb-tail{transform-box:view-box;transform-origin:170px 40px;animation:xbTail .45s ease-in-out infinite alternate}
-@keyframes xbTail{from{transform:rotate(-18deg)}to{transform:rotate(16deg)}}
-.xb-dog:hover .xb-tail{animation-duration:.16s}
-.xb-dog:hover .xb-head{animation-duration:1.2s}
-.xb-eyes{transform-box:view-box;transform-origin:130px 104px;animation:xbBlink 4.2s infinite}
-@keyframes xbBlink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
-.xb-nod{transform-box:view-box;transform-origin:130px 196px;animation:xbNod 3.6s ease-in-out infinite}
-@keyframes xbNod{0%,100%{transform:rotate(0deg)}20%{transform:rotate(-7deg)}40%{transform:rotate(5deg)}55%{transform:rotate(0deg)}}
-.nav-logo:hover .xb-nod{animation-duration:1.2s}
-@media (prefers-reduced-motion:reduce){.hoverlift{transition:none}.xb-head,.xb-tail,.xb-eyes,.xb-nod{animation:none}}
+</script>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap">
+  <style>
+    body {
+      margin: 0
+    }
 
-html{scroll-behavior:smooth}
-section{scroll-margin-top:84px}
-.overlay[hidden]{display:none}
-body.modal-open{overflow:hidden}
-</style>
-<link rel="stylesheet" href="motion.css">
-<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')</script>
+    a {
+      color: #B42A23
+    }
+
+    a:hover {
+      color: #8E1F1A
+    }
+
+    .xb {
+      font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+      color: #222222;
+      background: #FBF8F1;
+      font-size: 15px;
+      line-height: 1.8;
+      scroll-behavior: smooth
+    }
+
+    .xb * {
+      box-sizing: border-box
+    }
+
+    .xb p,
+    .xb h1,
+    .xb h2,
+    .xb h3,
+    .xb h4,
+    .xb ul,
+    .xb address {
+      margin: 0;
+      padding: 0
+    }
+
+    .xb ul {
+      list-style: none
+    }
+
+    .xb address {
+      font-style: normal
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    :root {
+      scroll-padding-top: 96px
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #FFFFFF;
+      border-bottom: 2px solid #222222
+    }
+
+    .nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+      flex-wrap: wrap;
+      padding-block: 8px
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #222222;
+      font-weight: 900;
+      font-size: 14.5px;
+      line-height: 1.3
+    }
+
+    .nav-logo:hover {
+      color: #222222
+    }
+
+    .nav-logo img {
+      width: 44px;
+      height: auto
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap
+    }
+
+    .nav-scroll {
+      position: relative
+    }
+
+    .nav-arrow {
+      display: none
+    }
+
+    .nav-links a {
+      color: #222222;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 800;
+      padding: 8px 13px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center
+    }
+
+    .nav-links a:hover {
+      border-color: #222222;
+      color: #222222;
+      background: #FBF8F1
+    }
+
+    .sec {
+      padding: 96px 0;
+      position: relative
+    }
+
+    .label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      color: #B42A23;
+      margin-bottom: 8px
+    }
+
+    .label img {
+      width: 34px;
+      height: auto
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: -.01em;
+      line-height: 1.25;
+      margin-bottom: 12px
+    }
+
+    .desc {
+      color: #5E5A55;
+      max-width: 680px;
+      margin-bottom: 44px;
+      font-size: 15px
+    }
+
+    .card {
+      background: #FFFFFF;
+      border: 2px solid #222222;
+      border-radius: 26px;
+      box-shadow: 5px 5px 0 #222222
+    }
+
+    .hoverlift {
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .hoverlift:hover {
+      transform: translate(-2px, -3px);
+      box-shadow: 8px 8px 0 #222222
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: #FFFFFF;
+      border: 2px solid #222222
+    }
+
+    .badge img {
+      width: 14px;
+      height: 14px;
+      opacity: .85
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 15px;
+      border-radius: 999px;
+      background: #DDF1EE;
+      color: #1B5751;
+      border: 2px solid #222222
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 3px 11px;
+      border-radius: 999px;
+      background: #F1EEE6;
+      color: #3D3A36
+    }
+
+    .tag-red {
+      background: #FBE3E1;
+      color: #9A231D
+    }
+
+    .scite {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1B5751;
+      text-decoration: none;
+      padding: 3px 11px;
+      border: 2px solid #1B5751;
+      border-radius: 999px
+    }
+
+    .scite:hover {
+      background: #DDF1EE;
+      color: #1B5751
+    }
+
+    .press {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #9A231D;
+      text-decoration: none;
+      padding: 5px 13px;
+      border: 2px solid #9A231D;
+      border-radius: 999px;
+      background: #FFFFFF
+    }
+
+    .press:hover {
+      background: #FBE3E1;
+      color: #9A231D
+    }
+
+    .ext {
+      width: 1em;
+      height: 1em;
+      flex: none;
+      transform: rotate(-45deg);
+      fill: currentColor
+    }
+
+    .ext use:last-child {
+      transform: translateX(-560px)
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 56px;
+      align-items: start
+    }
+
+    .about-body h3 {
+      font-size: 20px;
+      font-weight: 900;
+      margin: 40px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .about-body h3 img {
+      width: 18px;
+      height: 18px
+    }
+
+    .about-body p {
+      margin-bottom: 18px;
+      line-height: 1.95
+    }
+
+    .about-body strong {
+      background: linear-gradient(transparent 62%, #FBE3E1 62%);
+      font-weight: 800
+    }
+
+    .tl {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-left: 3px dashed #222222;
+      margin-left: 8px
+    }
+
+    .tl li {
+      position: relative;
+      padding: 0 0 18px 26px
+    }
+
+    .tl li:last-child {
+      padding-bottom: 0
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 3px solid #222222
+    }
+
+    .tl-year {
+      font-size: 12.5px;
+      font-weight: 900;
+      color: #B42A23;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: .04em
+    }
+
+    .tl-main {
+      font-weight: 800;
+      font-size: 14.5px;
+      line-height: 1.5
+    }
+
+    .tl-sub {
+      font-size: 12.5px;
+      color: #5E5A55;
+      line-height: 1.55;
+      margin-top: 2px
+    }
+
+    .r-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px
+    }
+
+    .r-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      border: 2px solid #222222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px
+    }
+
+    .r-icon svg {
+      width: 26px;
+      height: 26px;
+      overflow: visible
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(236px, 1fr));
+      gap: 26px
+    }
+
+    .m-frame {
+      overflow: hidden;
+      border-bottom: 2px solid #222222;
+      border-radius: 24px 24px 0 0
+    }
+
+    .m-photo {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block
+    }
+
+    .m-name {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.4
+    }
+
+    .m-btn {
+      font: inherit;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: #222222;
+      background: none;
+      border: 0;
+      padding: 0 0 1px;
+      border-bottom: 3px dotted #B42A23;
+      cursor: pointer;
+      line-height: 1.4;
+      min-height: 30px
+    }
+
+    .m-btn:hover {
+      color: #B42A23
+    }
+
+    .m-hint {
+      display: inline-flex;
+      margin-left: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #9A231D;
+      background: #FBE3E1;
+      border-radius: 999px;
+      padding: 1px 8px;
+      vertical-align: middle
+    }
+
+    .m-role {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #5E5A55
+    }
+
+    .m-note {
+      font-size: 12.5px;
+      color: #4E4A45;
+      line-height: 1.7;
+      border-top: 2px dashed #D9D4C9;
+      padding-top: 12px;
+      margin-top: 12px
+    }
+
+    .pub-wrap {
+      padding: 8px 32px
+    }
+
+    .pub-item {
+      display: grid;
+      grid-template-columns: 76px minmax(0, 1fr);
+      gap: 22px;
+      padding: 24px 0;
+      border-bottom: 2px dashed #D9D4C9;
+      align-items: start
+    }
+
+    .pub-item:last-child {
+      border-bottom: 0
+    }
+
+    .pub-year {
+      display: inline-flex;
+      justify-content: center;
+      font-size: 12.5px;
+      font-weight: 900;
+      color: #FFFFFF;
+      background: #222222;
+      border-radius: 999px;
+      padding: 3px 0;
+      font-variant-numeric: tabular-nums;
+      margin-top: 2px
+    }
+
+    .pub-body h4 {
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.55;
+      margin-bottom: 5px
+    }
+
+    .pub-body h4 a {
+      color: #222222;
+      text-decoration: none
+    }
+
+    .pub-body h4 a:hover {
+      color: #B42A23;
+      text-decoration: underline
+    }
+
+    .authors {
+      font-size: 13px;
+      color: #5E5A55;
+      font-style: italic;
+      margin-bottom: 4px
+    }
+
+    .authors strong {
+      color: #222222
+    }
+
+    .journal {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1B5751
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+      align-items: center
+    }
+
+    .sub-label {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      color: #FFFFFF;
+      background: #B42A23;
+      border: 2px solid #222222;
+      border-radius: 999px;
+      padding: 6px 28px;
+      margin: 0 0 1em
+    }
+
+    .more-btn {
+      box-shadow: 4px 4px 0 #222222
+    }
+
+    .g-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      min-width: 680px
+    }
+
+    .g-table th {
+      text-align: left;
+      padding: 14px 16px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      color: #5E5A55;
+      border-bottom: 3px solid #222222;
+      white-space: nowrap
+    }
+
+    .g-table td {
+      padding: 18px 16px;
+      border-bottom: 2px dashed #D9D4C9;
+      vertical-align: top;
+      line-height: 1.6
+    }
+
+    .g-table tr:last-child td {
+      border-bottom: 0
+    }
+
+    .pi-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 900;
+      padding: 3px 12px;
+      border-radius: 999px;
+      background: #FFFFFF;
+      border: 2px solid #B42A23;
+      color: #9A231D
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px
+    }
+
+    .c-block {
+      border: 2px solid #4A4743;
+      border-radius: 22px;
+      padding: 24px
+    }
+
+    .c-block h4 {
+      font-size: 12.5px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      color: #F4ABA5;
+      margin-bottom: 12px
+    }
+
+    .c-block p,
+    .c-block a {
+      color: #EDEAE3;
+      font-size: 14.5px;
+      line-height: 1.85;
+      text-decoration: none
+    }
+
+    .c-block a:hover {
+      color: #FFFFFF;
+      text-decoration: underline
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(20, 18, 16, .74);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px 16px;
+      overflow-y: auto
+    }
+
+    .a-card {
+      background: #FFFFFF;
+      border: 2px solid #222222;
+      border-radius: 28px;
+      box-shadow: 6px 6px 0 #222222;
+      max-width: 760px;
+      width: 100%;
+      padding: 40px 38px 34px;
+      position: relative;
+      margin: auto;
+      line-height: 1.6
+    }
+
+    .a-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid #222222;
+      background: #FFFFFF;
+      cursor: pointer;
+      color: #222222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0
+    }
+
+    .a-close svg {
+      width: 20px;
+      height: 20px;
+      overflow: visible;
+      fill: currentColor
+    }
+
+    .a-close:hover {
+      background: #FBE3E1
+    }
+
+    .a-head {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 26px;
+      padding-right: 48px
+    }
+
+    .a-head img {
+      width: 64px;
+      height: auto;
+      flex-shrink: 0
+    }
+
+    .a-title {
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.55;
+      margin-bottom: 6px
+    }
+
+    .a-sub {
+      font-size: 12.5px;
+      color: #5E5A55
+    }
+
+    .a-sec {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px dashed #D9D4C9
+    }
+
+    .a-sec:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0
+    }
+
+    .a-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid #222222;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .a-icon img {
+      width: 28px;
+      height: auto
+    }
+
+    .a-body h4 {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      margin-bottom: 8px;
+      color: #9A231D
+    }
+
+    .a-body p {
+      font-size: 13.5px;
+      color: #4E4A45;
+      line-height: 1.9
+    }
+
+    .a-kw {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .poster-img {
+      max-width: min(94vw, 900px);
+      max-height: 90vh;
+      border-radius: 16px;
+      border: 3px solid #FFFFFF;
+      display: block;
+      margin: auto
+    }
+
+    .paws {
+      display: flex;
+      gap: 26px;
+      opacity: .12
+    }
+
+    .paws img {
+      width: 30px;
+      height: 30px
+    }
+
+    @media (max-width:900px) {
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) !important
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr)
+      }
+    }
+
+    @media (max-width:640px) {
+      .sec {
+        padding: 64px 0
+      }
+
+      .title {
+        font-size: 28px
+      }
+
+      .nav-row {
+        min-height: 0;
+        gap: 6px;
+        padding-block: 8px 4px
+      }
+
+      .nav-logo {
+        font-size: 13px;
+        gap: 8px
+      }
+
+      .nav-logo img,
+      .nav-logo svg {
+        width: 38px !important
+      }
+
+      .nav-links {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        gap: 2px;
+        margin-inline: calc(24px * -1);
+        padding: 0 24px 6px;
+        scroll-snap-type: x proximity;
+        scroll-padding-inline: 24px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%);
+        mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%)
+      }
+
+      .nav-links::-webkit-scrollbar {
+        display: none
+      }
+
+      .nav-scroll {
+        width: 100%
+      }
+
+      .nav-arrow {
+        position: absolute;
+        top: calc(50% - 3px);
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 28px;
+        height: 28px;
+        padding: 0;
+        border: 2px solid #222222;
+        border-radius: 50%;
+        background: #FFFFFF;
+        color: #222222;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 0 #222222;
+        animation: navNudge 1.4s ease-in-out infinite
+      }
+
+      .nav-arrow:not([hidden]) {
+        display: inline-flex
+      }
+
+      .nav-arrow svg {
+        width: 10px;
+        height: 16px;
+        overflow: visible
+      }
+
+      .nav-prev {
+        left: -14px;
+        --d: -3px
+      }
+
+      .nav-next {
+        right: -14px;
+        --d: 3px
+      }
+
+      @keyframes navNudge {
+
+        0%,
+        100% {
+          margin-inline-start: 0
+        }
+
+        50% {
+          margin-inline-start: var(--d)
+        }
+      }
+
+      @media (prefers-reduced-motion:reduce) {
+        .nav-arrow {
+          animation: none
+        }
+      }
+
+      .nav-links a {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        white-space: nowrap;
+        font-size: 13px;
+        padding: 6px 12px;
+        min-height: 36px
+      }
+
+      .pub-wrap {
+        padding: 4px 18px
+      }
+
+      .pub-item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px
+      }
+
+      .pub-year {
+        width: 68px
+      }
+
+      .a-card {
+        padding: 32px 20px 24px
+      }
+
+      .hero-title {
+        font-size: 30px !important
+      }
+    }
+
+    .xb-head {
+      transform-box: view-box;
+      transform-origin: 130px 196px;
+      animation: xbHead 2.8s ease-in-out infinite
+    }
+
+    @keyframes xbHead {
+
+      0%,
+      100% {
+        transform: rotate(-4deg)
+      }
+
+      50% {
+        transform: rotate(4deg)
+      }
+    }
+
+    .xb-tail {
+      transform-box: view-box;
+      transform-origin: 170px 40px;
+      animation: xbTail .45s ease-in-out infinite alternate
+    }
+
+    @keyframes xbTail {
+      from {
+        transform: rotate(-18deg)
+      }
+
+      to {
+        transform: rotate(16deg)
+      }
+    }
+
+    .xb-dog:hover .xb-tail {
+      animation-duration: .16s
+    }
+
+    .xb-dog:hover .xb-head {
+      animation-duration: 1.2s
+    }
+
+    .xb-eyes {
+      transform-box: view-box;
+      transform-origin: 130px 104px;
+      animation: xbBlink 4.2s infinite
+    }
+
+    @keyframes xbBlink {
+
+      0%,
+      92%,
+      100% {
+        transform: scaleY(1)
+      }
+
+      95% {
+        transform: scaleY(.1)
+      }
+    }
+
+    .xb-nod {
+      transform-box: view-box;
+      transform-origin: 130px 196px;
+      animation: xbNod 3.6s ease-in-out infinite
+    }
+
+    @keyframes xbNod {
+
+      0%,
+      100% {
+        transform: rotate(0deg)
+      }
+
+      20% {
+        transform: rotate(-7deg)
+      }
+
+      40% {
+        transform: rotate(5deg)
+      }
+
+      55% {
+        transform: rotate(0deg)
+      }
+    }
+
+    .nav-logo:hover .xb-nod {
+      animation-duration: 1.2s
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .hoverlift {
+        transition: none
+      }
+
+      .xb-head,
+      .xb-tail,
+      .xb-eyes,
+      .xb-nod {
+        animation: none
+      }
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    section {
+      scroll-margin-top: 84px
+    }
+
+    .overlay[hidden] {
+      display: none
+    }
+
+    body.modal-open {
+      overflow: hidden
+    }
+  </style>
+  <link rel="stylesheet" href="motion.css">
+  <script>if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion')</script>
+  <script>
+      /* 手機版（寬 ≤640px，同 CSS 的手機斷點）重新整理一律回到最上方；桌機維持瀏覽器預設。
+         manual 擋掉瀏覽器還原捲動位置、並拿掉網址的 #（否則會跳到該段落）；使用者一操作就還原成 auto，
+         之後點導覽再按「上一頁」才會回到原本的閱讀位置。要在瀏覽器還原捲動之前執行，所以放在 head。
+         offsetHeight 那行不能省：Chromium 在重新整理時，設了 manual 之後要立刻排版一次才擋得住還原 */
+      (function () {
+        try {
+          var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0],
+            reload = (n && n.type === 'reload') || (performance.navigation && performance.navigation.type === 1);
+          if (!reload || !matchMedia('(max-width:640px)').matches) return;
+          history.scrollRestoration = 'manual';
+          void document.documentElement.offsetHeight;
+          if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+          ['pointerdown', 'keydown', 'wheel'].forEach(function (t) { addEventListener(t, function () { history.scrollRestoration = 'auto' }, { once: true, passive: true }) });
+        } catch (e) { }
+      })();
+  </script>
 </head>
+
 <body>
-<div class="xb">
-<svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol></svg>
+  <div class="xb">
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <symbol id="i-arrow" viewBox="0 0 512 512">
+        <!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+        <path fill="currentColor"
+          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+      </symbol>
+    </svg>
 
-<!-- NAV -->
-<nav class="nav">
-  <div class="wrap nav-row">
-    <a class="nav-logo" href="#home"><svg class="xb-face" viewBox="-6 14 272 196" fill="none" stroke="#222222" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 46px; height: auto; overflow: visible">
-<g class="xb-nod">
-<path d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z" fill="#FFFFFF"></path>
-<g class="xb-eyes"><circle cx="102" cy="104" r="9" fill="#222222" stroke="none"></circle><circle cx="158" cy="104" r="9" fill="#222222" stroke="none"></circle></g>
-<ellipse cx="130" cy="108" rx="12" ry="9" fill="#222222" stroke="none"></ellipse>
-<path d="M130 116 L130 124 M108 118 Q119 136 130 124 Q141 136 152 118"></path>
-</g>
-</svg><span>健康服務評估<span style="color: #B42A23">及抗生素流行病學</span>研究室</span></a>
-    <div class="nav-scroll">
-      <button class="nav-arrow nav-prev" type="button" aria-label="向左捲動選單" hidden><svg aria-hidden="true" viewBox="0 0 320 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
-    <div class="nav-links">
-      <a href="#about">關於 PI</a>
-      <a href="#research">研究方向</a>
-      <a href="#team">About us</a>
-      <a href="#publications">發表論文</a>
-      <a href="#grants">研究計畫</a>
-      <a href="#news">媒體報導</a>
-      <a href="#contact">聯絡我們</a>
-    </div>
-      <button class="nav-arrow nav-next" type="button" aria-label="向右捲動選單" hidden><svg aria-hidden="true" viewBox="0 0 320 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M311.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L243.2 256 73.9 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></button>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section id="home" style="padding: 72px 0 96px; background: #FFFFFF; border-bottom: 2px solid #222222; position: relative; overflow: hidden">
-  <div class="wrap hero-grid" style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; align-items: center">
-    <div>
-      <p class="hero-pill" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 900; letter-spacing: .14em; color: #1B5751; background: #DDF1EE; border: 2px solid #222222; border-radius: 999px; padding: 5px 16px; margin-bottom: 24px">國防醫學大學 · 公共衛生學院</p>
-      <h1 class="hero-title" style="font-size: 46px; font-weight: 900; line-height: 1.28; letter-spacing: -.01em; margin-bottom: 24px">抗生素使用、抗藥性<br><span style="color: #B42A23">與長期健康影響</span><br>大型資料庫流行病學研究</h1>
-      <p class="hero-desc" style="font-size: 15.5px; color: #4E4A45; line-height: 1.95; max-width: 560px; margin-bottom: 30px">本研究室運用大型醫療資料庫與流行病學方法，評估基層醫療抗生素合理使用及其長期健康影響，探討不同族群如高齡者及孕婦之抗生素暴露風險與健康預後，並建立以風險為基礎的抗生素處方決策策略，以因應全球抗藥性公衛威脅。</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px">
-        <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">大型資料庫流行病學</span>
-        <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">抗生素合理使用</span>
-        <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">母嬰健康研究</span>
-        <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">風險為基礎處方策略</span>
-        <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">高齡化抗生素使用挑戰</span>
-      </div>
-    </div>
-    <div class="hero-visual" style="display: flex; justify-content: center; position: relative">
-      <div style="position: relative; width: 100%; max-width: 400px">
-        <div class="hero-bubble" style="position: absolute; top: -18px; left: -8px; z-index: 2; background: #FFFFFF; border: 2px solid #222222; border-radius: 20px; padding: 8px 16px; font-size: 15px; font-weight: 900; box-shadow: 3px 3px 0 #222222">汪！歡迎來到 R4211</div>
-        <img class="hero-standee" src="images/mascot-standee.png" alt="研究室吉祥物小白的紙板立牌" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border: 2px solid #222222; border-radius: 32px; box-shadow: 8px 8px 0 #222222; transform: rotate(2deg); background: #F1EEE6">
-        <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: -34px; bottom: -46px; width: 136px; height: auto; overflow: visible">
-<path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z" fill="#FFFFFF"></path>
-<path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z" fill="#FFFFFF"></path>
-<path d="M96 236 L96 244 M104 236 L104 244 M156 236 L156 244 M164 236 L164 244" stroke-width="3"></path>
-<g class="xb-head" style="animation-delay: -0.4s">
-<g class="xb-tail" style="animation-delay: -0.4s"><path d="M158 40 C150 14 166 0 182 4 C198 10 190 30 178 42" fill="#FFFFFF"></path></g>
-<path d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z" fill="#FFFFFF"></path>
-<g class="xb-eyes"><circle cx="102" cy="104" r="6.5" fill="#222222" stroke="none"></circle><circle cx="158" cy="104" r="6.5" fill="#222222" stroke="none"></circle></g>
-<ellipse cx="130" cy="108" rx="10" ry="7.5" fill="#222222" stroke="none"></ellipse>
-<path d="M130 114 L130 122 M110 117 Q119 133 130 122 Q141 133 150 117"></path>
-</g>
-</svg>
-      </div>
-    </div>
-  </div>
-  <div class="wrap paws" aria-hidden="true" style="margin-top: 56px">
-    <img src="images/paw.svg" alt="" style="transform: rotate(80deg)">
-    <img src="images/paw.svg" alt="" style="transform: rotate(100deg) translateY(16px)">
-    <img src="images/paw.svg" alt="" style="transform: rotate(80deg)">
-    <img src="images/paw.svg" alt="" style="transform: rotate(100deg) translateY(16px)">
-    <img src="images/paw.svg" alt="" style="transform: rotate(80deg)">
-    <img src="images/paw.svg" alt="" style="transform: rotate(100deg) translateY(16px)">
-  </div>
-</section>
-
-<!-- ABOUT PI -->
-<section id="about" class="sec">
-  <div class="wrap about-grid">
-    <div>
-      <div class="card" style="padding: 32px 22px 24px; text-align: center; position: relative">
-        <img src="images/pi-yang.png" alt="楊雅婷教授" style="width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: center top; display: block; margin: 0 auto 16px; border: 3px solid #222222">
-        <p style="font-family: 'Noto Sans TC', sans-serif; font-size: 19px; font-weight: 900; line-height: 1.4">楊雅婷 助理教授</p>
-        <p style="font-size: 14px; font-weight: 700; color: #5E5A55; margin-bottom: 8px">Ya-Ting Yang, PhD</p>
-        <p style="font-size: 13px; color: #5E5A55; line-height: 1.6; margin-bottom: 20px">國防醫學大學<br>公共衛生學院</p>
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 999px; background: #222222; color: #FFFFFF; font-size: 13px; font-weight: 800; text-decoration: none; border: 2px solid #222222">ResearchGate</a>
-          <button type="button" onclick="openModal('thesis')" style="display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 999px; background: #FBE3E1; color: #9A231D; font: inherit; font-size: 13px; font-weight: 800; border: 2px solid #222222; cursor: pointer">博士論文摘要</button>
-          <a href="mailto:yang@mail.ndmctsgh.edu.tw" style="display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 999px; background: #FFFFFF; color: #222222; font-size: 12px; font-weight: 700; text-decoration: none; border: 2px solid #222222; word-break: break-all; padding: 4px 10px">yang@mail.ndmctsgh.edu.tw</a>
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="wrap nav-row">
+        <a class="nav-logo" href="#home"><svg class="xb-face" viewBox="-6 14 272 196" fill="none" stroke="#222222"
+            stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+            style="width: 46px; height: auto; overflow: visible">
+            <g class="xb-nod">
+              <path
+                d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z"
+                fill="#FFFFFF"></path>
+              <g class="xb-eyes">
+                <circle cx="102" cy="104" r="9" fill="#222222" stroke="none"></circle>
+                <circle cx="158" cy="104" r="9" fill="#222222" stroke="none"></circle>
+              </g>
+              <ellipse cx="130" cy="108" rx="12" ry="9" fill="#222222" stroke="none"></ellipse>
+              <path d="M130 116 L130 124 M108 118 Q119 136 130 124 Q141 136 152 118"></path>
+            </g>
+          </svg><span>健康服務評估<span style="color: #B42A23">及抗生素流行病學</span>研究室</span></a>
+        <div class="nav-scroll">
+          <button class="nav-arrow nav-prev" type="button" aria-label="向左捲動選單" hidden><svg aria-hidden="true"
+              viewBox="0 0 320 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+              <path fill="currentColor"
+                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+            </svg></button>
+          <div class="nav-links">
+            <a href="#about">關於 PI</a>
+            <a href="#research">研究方向</a>
+            <a href="#team">About us</a>
+            <a href="#publications">發表論文</a>
+            <a href="#grants">研究計畫</a>
+            <a href="#news">媒體報導</a>
+            <a href="#contact">聯絡我們</a>
+          </div>
+          <button class="nav-arrow nav-next" type="button" aria-label="向右捲動選單" hidden><svg aria-hidden="true"
+              viewBox="0 0 320 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+              <path fill="currentColor"
+                d="M311.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L243.2 256 73.9 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+            </svg></button>
         </div>
       </div>
-    </div>
-    <div class="about-body">
-      <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">關於 PI</div>
-      <h2 class="title" style="margin-bottom: 22px">Overview</h2>
-      <p>抗生素抗藥性（Antimicrobial Resistance, AMR）是全球重要的公共衛生議題。<strong>隨著全球人口高齡化、慢性疾病盛行率增加及感染治療需求提升，抗生素的使用需求與累積暴露亦可能隨之增加。</strong>然而，抗生素的過度及不當使用會加速抗藥性的發展，降低抗生素的治療效益，進而增加感染治療失敗、住院及死亡的風險。此外，COVID-19 疫情期間抗生素的不當使用，也使全球抗藥性防治面臨更嚴峻的挑戰。</p>
-      <p>本研究室專注於<strong>抗生素使用及其對健康的長期影響</strong>，特別聚焦於基層醫療常見感染的抗生素合理使用。透過大型醫療資料庫與流行病學研究方法，分析不同年齡及健康狀態族群的抗生素使用趨勢，並探討抗生素重複使用與累積暴露對抗藥性、治療成效及健康預後的影響。過去研究發現，頻繁且重複使用抗生素與較高的住院及死亡風險顯著相關，尤其是曾使用多種類別抗生素及高頻率使用抗生素的族群。</p>
-      <p>本研究室亦關注<strong>抗生素暴露與母嬰健康（Maternal and Child Health）</strong>。抗生素為妊娠期間常見的處方藥物之一，其使用除了考量感染治療的效益外，亦須審慎評估對母體及子代健康的潛在影響。孕前及孕期抗生素暴露與子代健康預後之關聯，可能受到暴露時機、藥物類別、累積暴露程度及母體感染適應症等因素影響。本研究室運用臺灣全民健康保險研究資料庫及相關健康資料，探討孕前及孕期抗生素暴露與新生兒健康預後及子代長期健康之關聯，為孕期用藥安全、臨床處方決策及婦幼健康照護提供實證依據。</p>
-      <p>未來研究將進一步探討抗生素長期暴露與疾病發生之間的潛在關聯，包括腸道微生物群失衡（Gut Microbiota Dysbiosis）、抗藥性發展及慢性疾病風險。本研究室強調<strong>以風險為基礎的抗生素處方策略（Risk-based Antibiotic Prescribing）</strong>，依據患者的年齡、共病狀況、感染類型、疾病嚴重程度及過往抗生素使用情形，量化個別患者接受抗生素治療的潛在效益與危害。在確保有治療需求的高風險患者獲得適切且及時治療的同時，減少低風險患者不必要的抗生素暴露，並透過實證研究優化臨床處方指引，促進抗生素合理使用與個人化治療，以降低抗藥性所造成的公共衛生威脅。</p>
+    </nav>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px">
+    <!-- HERO -->
+    <section id="home"
+      style="padding: 72px 0 96px; background: #FFFFFF; border-bottom: 2px solid #222222; position: relative; overflow: hidden">
+      <div class="wrap hero-grid"
+        style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; align-items: center">
         <div>
-          <h3><img src="images/paw.svg" alt="" aria-hidden="true">學術背景</h3>
-          <ul class="tl">
-            <li><span class="tl-dot"></span><p class="tl-year">2024</p><p class="tl-main">健康資訊學博士（PhD, Health Informatics）</p><p class="tl-sub">Centre for Health Informatics, School of Health Sciences, Faculty of Biology, Medicine, and Health, University of Manchester, UK</p></li>
-            <li><span class="tl-dot"></span><p class="tl-year">2017</p><p class="tl-main">公共衛生學研究所 碩士（MSc, Public Health）</p><p class="tl-sub">Graduate Institute of Public Health, National Defense Medical Center, Taiwan</p></li>
-            <li><span class="tl-dot"></span><p class="tl-year">2013</p><p class="tl-main">公共衛生學系 學士（BSc, Public Health）</p><p class="tl-sub">School of Public Health, National Defense Medical Center, Taiwan</p></li>
-          </ul>
+          <p class="hero-pill"
+            style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 900; letter-spacing: .14em; color: #1B5751; background: #DDF1EE; border: 2px solid #222222; border-radius: 999px; padding: 5px 16px; margin-bottom: 24px">
+            國防醫學大學 · 公共衛生學院</p>
+          <h1 class="hero-title"
+            style="font-size: 46px; font-weight: 900; line-height: 1.28; letter-spacing: -.01em; margin-bottom: 24px">
+            抗生素使用、抗藥性<br><span style="color: #B42A23">與長期健康影響</span><br>大型資料庫流行病學研究</h1>
+          <p class="hero-desc"
+            style="font-size: 15.5px; color: #4E4A45; line-height: 1.95; max-width: 560px; margin-bottom: 30px">
+            本研究室運用大型醫療資料庫與流行病學方法，評估基層醫療抗生素合理使用及其長期健康影響，探討不同族群如高齡者及孕婦之抗生素暴露風險與健康預後，並建立以風險為基礎的抗生素處方決策策略，以因應全球抗藥性公衛威脅。</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px">
+            <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">大型資料庫流行病學</span>
+            <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">抗生素合理使用</span>
+            <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">母嬰健康研究</span>
+            <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">風險為基礎處方策略</span>
+            <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">高齡化抗生素使用挑戰</span>
+          </div>
         </div>
+        <div class="hero-visual" style="display: flex; justify-content: center; position: relative">
+          <div style="position: relative; width: 100%; max-width: 400px">
+            <div class="hero-bubble"
+              style="position: absolute; top: -18px; left: -8px; z-index: 2; background: #FFFFFF; border: 2px solid #222222; border-radius: 20px; padding: 8px 16px; font-size: 15px; font-weight: 900; box-shadow: 3px 3px 0 #222222">
+              汪！歡迎來到 R4211</div>
+            <img class="hero-standee" src="images/mascot-standee.png" alt="研究室吉祥物小白的紙板立牌"
+              style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border: 2px solid #222222; border-radius: 32px; box-shadow: 8px 8px 0 #222222; transform: rotate(2deg); background: #F1EEE6">
+            <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              style="position: absolute; right: -34px; bottom: -46px; width: 136px; height: auto; overflow: visible">
+              <path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z"
+                fill="#FFFFFF"></path>
+              <path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z"
+                fill="#FFFFFF"></path>
+              <path d="M96 236 L96 244 M104 236 L104 244 M156 236 L156 244 M164 236 L164 244" stroke-width="3"></path>
+              <g class="xb-head" style="animation-delay: -0.4s">
+                <g class="xb-tail" style="animation-delay: -0.4s">
+                  <path d="M158 40 C150 14 166 0 182 4 C198 10 190 30 178 42" fill="#FFFFFF"></path>
+                </g>
+                <path
+                  d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z"
+                  fill="#FFFFFF"></path>
+                <g class="xb-eyes">
+                  <circle cx="102" cy="104" r="6.5" fill="#222222" stroke="none"></circle>
+                  <circle cx="158" cy="104" r="6.5" fill="#222222" stroke="none"></circle>
+                </g>
+                <ellipse cx="130" cy="108" rx="10" ry="7.5" fill="#222222" stroke="none"></ellipse>
+                <path d="M130 114 L130 122 M110 117 Q119 133 130 122 Q141 133 150 117"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="wrap paws" aria-hidden="true" style="margin-top: 56px">
+        <img src="images/paw.svg" alt="" style="transform: rotate(80deg)">
+        <img src="images/paw.svg" alt="" style="transform: rotate(100deg) translateY(16px)">
+        <img src="images/paw.svg" alt="" style="transform: rotate(80deg)">
+        <img src="images/paw.svg" alt="" style="transform: rotate(100deg) translateY(16px)">
+        <img src="images/paw.svg" alt="" style="transform: rotate(80deg)">
+        <img src="images/paw.svg" alt="" style="transform: rotate(100deg) translateY(16px)">
+      </div>
+    </section>
+
+    <!-- ABOUT PI -->
+    <section id="about" class="sec">
+      <div class="wrap about-grid">
         <div>
-          <h3><img src="images/paw.svg" alt="" aria-hidden="true">學術經歷</h3>
-          <ul class="tl">
-            <li><span class="tl-dot"></span><p class="tl-year">2027–</p><p class="tl-main">助理教授（Assistant Professor）</p><p class="tl-sub">School of Public Health, National Defense Medical Center, Taipei, Taiwan</p></li>
-            <li><span class="tl-dot"></span><p class="tl-year">2024–2025</p><p class="tl-main">講師（Lecturer）</p><p class="tl-sub">School of Public Health, National Defense Medical Center, Taipei, Taiwan</p></li>
-            <li><span class="tl-dot"></span><p class="tl-year">2019–2020</p><p class="tl-main">助教（Teaching Assistant）</p><p class="tl-sub">Graduate Institute of Aerospace and Undersea Medicine, National Defense Medical Center, Taiwan</p></li>
-            <li><span class="tl-dot"></span><p class="tl-year">2018–2019</p><p class="tl-main">兼任講師（Adjunct Instructor）</p><p class="tl-sub">School of Public Health, National Defense Medical Center, Taipei, Taiwan</p></li>
-            <li><span class="tl-dot"></span><p class="tl-year">2013–2018</p><p class="tl-main">助教（Teaching Assistant）</p><p class="tl-sub">School of Public Health, National Defense Medical Center, Taipei, Taiwan</p></li>
-          </ul>
+          <div class="card" style="padding: 32px 22px 24px; text-align: center; position: relative">
+            <img src="images/pi-yang.png" alt="楊雅婷教授"
+              style="width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: center top; display: block; margin: 0 auto 16px; border: 3px solid #222222">
+            <p style="font-family: 'Noto Sans TC', sans-serif; font-size: 19px; font-weight: 900; line-height: 1.4">楊雅婷
+              助理教授</p>
+            <p style="font-size: 14px; font-weight: 700; color: #5E5A55; margin-bottom: 8px">Ya-Ting Yang, PhD</p>
+            <p style="font-size: 13px; color: #5E5A55; line-height: 1.6; margin-bottom: 20px">國防醫學大學<br>公共衛生學院</p>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener"
+                style="display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 999px; background: #222222; color: #FFFFFF; font-size: 13px; font-weight: 800; text-decoration: none; border: 2px solid #222222">ResearchGate</a>
+              <button type="button" onclick="openModal('thesis')"
+                style="display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 999px; background: #FBE3E1; color: #9A231D; font: inherit; font-size: 13px; font-weight: 800; border: 2px solid #222222; cursor: pointer">博士論文摘要</button>
+              <a href="mailto:yang@mail.ndmctsgh.edu.tw"
+                style="display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 999px; background: #FFFFFF; color: #222222; font-size: 12px; font-weight: 700; text-decoration: none; border: 2px solid #222222; word-break: break-all; padding: 4px 10px">yang@mail.ndmctsgh.edu.tw</a>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="about-body">
+          <div class="label"><img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+              alt="" aria-hidden="true">關於 PI</div>
+          <h2 class="title" style="margin-bottom: 22px">Overview</h2>
+          <p>抗生素抗藥性（Antimicrobial Resistance,
+            AMR）是全球重要的公共衛生議題。<strong>隨著全球人口高齡化、慢性疾病盛行率增加及感染治療需求提升，抗生素的使用需求與累積暴露亦可能隨之增加。</strong>然而，抗生素的過度及不當使用會加速抗藥性的發展，降低抗生素的治療效益，進而增加感染治療失敗、住院及死亡的風險。此外，COVID-19
+            疫情期間抗生素的不當使用，也使全球抗藥性防治面臨更嚴峻的挑戰。</p>
+          <p>
+            本研究室專注於<strong>抗生素使用及其對健康的長期影響</strong>，特別聚焦於基層醫療常見感染的抗生素合理使用。透過大型醫療資料庫與流行病學研究方法，分析不同年齡及健康狀態族群的抗生素使用趨勢，並探討抗生素重複使用與累積暴露對抗藥性、治療成效及健康預後的影響。過去研究發現，頻繁且重複使用抗生素與較高的住院及死亡風險顯著相關，尤其是曾使用多種類別抗生素及高頻率使用抗生素的族群。
+          </p>
+          <p>本研究室亦關注<strong>抗生素暴露與母嬰健康（Maternal and Child
+              Health）</strong>。抗生素為妊娠期間常見的處方藥物之一，其使用除了考量感染治療的效益外，亦須審慎評估對母體及子代健康的潛在影響。孕前及孕期抗生素暴露與子代健康預後之關聯，可能受到暴露時機、藥物類別、累積暴露程度及母體感染適應症等因素影響。本研究室運用臺灣全民健康保險研究資料庫及相關健康資料，探討孕前及孕期抗生素暴露與新生兒健康預後及子代長期健康之關聯，為孕期用藥安全、臨床處方決策及婦幼健康照護提供實證依據。
+          </p>
+          <p>未來研究將進一步探討抗生素長期暴露與疾病發生之間的潛在關聯，包括腸道微生物群失衡（Gut Microbiota
+            Dysbiosis）、抗藥性發展及慢性疾病風險。本研究室強調<strong>以風險為基礎的抗生素處方策略（Risk-based Antibiotic
+              Prescribing）</strong>，依據患者的年齡、共病狀況、感染類型、疾病嚴重程度及過往抗生素使用情形，量化個別患者接受抗生素治療的潛在效益與危害。在確保有治療需求的高風險患者獲得適切且及時治療的同時，減少低風險患者不必要的抗生素暴露，並透過實證研究優化臨床處方指引，促進抗生素合理使用與個人化治療，以降低抗藥性所造成的公共衛生威脅。
+          </p>
 
-      <h3><img src="images/paw.svg" alt="" aria-hidden="true">授課科目</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px">
-        <span class="chip">人口與衛生統計學（大學部）</span>
-        <span class="chip">生物統計學 含實習（碩士班）</span>
-      </div>
-    </div>
-  </div>
-</section>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px">
+            <div>
+              <h3><img src="images/paw.svg" alt="" aria-hidden="true">學術背景</h3>
+              <ul class="tl">
+                <li><span class="tl-dot"></span>
+                  <p class="tl-year">2024</p>
+                  <p class="tl-main">健康資訊學博士（PhD, Health Informatics）</p>
+                  <p class="tl-sub">Centre for Health Informatics, School of Health Sciences, Faculty of Biology,
+                    Medicine, and Health, University of Manchester, UK</p>
+                </li>
+                <li><span class="tl-dot"></span>
+                  <p class="tl-year">2017</p>
+                  <p class="tl-main">公共衛生學研究所 碩士（MSc, Public Health）</p>
+                  <p class="tl-sub">Graduate Institute of Public Health, National Defense Medical Center, Taiwan</p>
+                </li>
+                <li><span class="tl-dot"></span>
+                  <p class="tl-year">2013</p>
+                  <p class="tl-main">公共衛生學系 學士（BSc, Public Health）</p>
+                  <p class="tl-sub">School of Public Health, National Defense Medical Center, Taiwan</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3><img src="images/paw.svg" alt="" aria-hidden="true">學術經歷</h3>
+              <ul class="tl">
+                <li><span class="tl-dot"></span>
+                  <p class="tl-year">2027–</p>
+                  <p class="tl-main">助理教授（Assistant Professor）</p>
+                  <p class="tl-sub">School of Public Health, National Defense Medical Center, Taipei, Taiwan</p>
+                </li>
+                <li><span class="tl-dot"></span>
+                  <p class="tl-year">2024–2025</p>
+                  <p class="tl-main">講師（Lecturer）</p>
+                  <p class="tl-sub">School of Public Health, National Defense Medical Center, Taipei, Taiwan</p>
+                </li>
+                <li><span class="tl-dot"></span>
+                  <p class="tl-year">2019–2020</p>
+                  <p class="tl-main">助教（Teaching Assistant）</p>
+                  <p class="tl-sub">Graduate Institute of Aerospace and Undersea Medicine, National Defense Medical
+                    Center, Taiwan</p>
+                </li>
+                <li><span class="tl-dot"></span>
+                  <p class="tl-year">2018–2019</p>
+                  <p class="tl-main">兼任講師（Adjunct Instructor）</p>
+                  <p class="tl-sub">School of Public Health, National Defense Medical Center, Taipei, Taiwan</p>
+                </li>
+                <li><span class="tl-dot"></span>
+                  <p class="tl-year">2013–2018</p>
+                  <p class="tl-main">助教（Teaching Assistant）</p>
+                  <p class="tl-sub">School of Public Health, National Defense Medical Center, Taipei, Taiwan</p>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-<!-- RESEARCH -->
-<section id="research" class="sec" style="background: #FFFFFF; border-top: 2px solid #222222; border-bottom: 2px solid #222222">
-  <div class="wrap">
-    <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">研究方向</div>
-    <h2 class="title">Research interests</h2>
-    <p class="desc">本研究室整合健康資訊學、流行病學與大型資料庫分析，系統性評估抗生素使用模式及其健康後果，涵蓋基層醫療合理用藥、母嬰健康、高齡化抗生素使用挑戰，以及風險為基礎的處方決策策略。</p>
-    <div class="r-grid">
-      <div class="card hoverlift" style="padding: 28px 26px">
-        <div class="r-icon" style="background: #E3EEF9; color: #1D4E89"><svg aria-hidden="true" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M448 205.8c-14.8 9.8-31.8 17.7-49.5 24-47 16.8-108.7 26.2-174.5 26.2S96.4 246.5 49.5 229.8c-17.6-6.3-34.7-14.2-49.5-24L0 288c0 44.2 100.3 80 224 80s224-35.8 224-80l0-82.2zm0-77.8l0-48C448 35.8 347.7 0 224 0S0 35.8 0 80l0 48c0 44.2 100.3 80 224 80s224-35.8 224-80zM398.5 389.8C351.6 406.5 289.9 416 224 416S96.4 406.5 49.5 389.8c-17.6-6.3-34.7-14.2-49.5-24L0 432c0 44.2 100.3 80 224 80s224-35.8 224-80l0-66.2c-14.8 9.8-31.8 17.7-49.5 24z"/></svg></div>
-        <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">大型資料庫流行病學方法</h3>
-        <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">發展適用於電子病歷與病患資料庫的流行病學分析方法，包含傾向分數匹配、工具變數及時間序列分析。</p>
-      </div>
-      <div class="card hoverlift" style="padding: 28px 26px">
-        <div class="r-icon" style="background: #FBE3E1; color: #9A231D"><svg aria-hidden="true" viewBox="0 0 576 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M96 112c0-26.5 21.5-48 48-48s48 21.5 48 48l0 112-96 0 0-112zm-64 0l0 288c0 61.9 50.1 112 112 112s112-50.1 112-112l0-105.8 116.3 169.5c35.5 51.7 105.3 64.3 156 28.1s63-107.5 27.5-159.2L427.3 145.3c-35.5-51.7-105.3-64.3-156-28.1-5.6 4-10.7 8.4-15.3 13.1l0-18.3C256 50.1 205.9 0 144 0S32 50.1 32 112zM296.6 240.2c-16-23.3-10-55.3 11.9-71 21.2-15.1 50.5-10.3 66 12.2l67 97.6-79.9 55.9-65-94.8z"/></svg></div>
-        <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">抗生素合理使用與長期健康影響</h3>
-        <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">分析基層醫療常見感染之抗生素處方模式與時間趨勢，探討重複暴露與累積使用對抗藥性、治療成效及健康預後的影響，建立合理使用指標。</p>
-      </div>
-      <div class="card hoverlift" style="padding: 28px 26px">
-        <div class="r-icon" style="background: #FCE6EC; color: #9A2350"><svg aria-hidden="true" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M192 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112zm80 321.2c8.6-4.5 16.8-10 24.3-16.5l4-3.4c22.6-19.4 35.7-47.7 35.7-77.6 0-35.9-18.8-69.1-49.6-87.6l-30.4-18.2 0-1.8c0-46.5-37.7-84.1-84.1-84.1-28.1 0-54.4 14.1-70 37.5L21.4 270.2c-9.8 14.7-5.8 34.6 8.9 44.4s34.6 5.8 44.4-8.9l29-43.5-30.5 113.5c-2.6 9.6-.6 19.9 5.5 27.8S94 416 104 416l8 0 0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96 32 0 0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-110.8z"/></svg></div>
-        <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">抗生素暴露與母嬰健康</h3>
-        <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">運用臺灣健保研究資料庫，探討孕前及孕期抗生素暴露與新生兒健康預後及子代長期健康之關聯，為孕期用藥安全提供實證依據。</p>
-      </div>
-      <div class="card hoverlift" style="padding: 28px 26px">
-        <div class="r-icon" style="background: #DDF1EE; color: #1B5751"><svg aria-hidden="true" viewBox="0 0 640 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M384 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L398.4 96c-5.2 25.8-22.9 47.1-46.4 57.3l0 294.7 160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-384 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0 0-294.7c-23.5-10.3-41.2-31.6-46.4-57.3L128 96c-17.7 0-32-14.3-32-32s14.3-32 32-32l128 0c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288L584.4 320 512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9zM126.8 195.8L54.4 320 199.3 320 126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1z"/></svg></div>
-        <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">風險為基礎的抗生素處方策略</h3>
-        <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">依據患者年齡、共病、感染類型及過往用藥史，量化個別患者抗生素治療的潛在效益與危害，優化處方決策以促進合理使用。</p>
-      </div>
-      <div class="card hoverlift" style="padding: 28px 26px">
-        <div class="r-icon" style="background: #FFF0DC; color: #8A4B00"><svg aria-hidden="true" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M232-32a56 56 0 1 1 0 112 56 56 0 1 1 0-112zM144 236.7L97.7 299.1c-10.5 14.2-30.6 17.2-44.8 6.6s-17.2-30.6-6.6-44.8l70.5-95C142 132 181.7 112 224 112s82 20 107.2 53.9l70.5 95c10.5 14.2 7.6 34.2-6.6 44.8s-34.2 7.6-44.8-6.6L304 236.7 304 512c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-275.3zM392 384c-4.4 0-8 3.6-8 8 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-30.9 25.1-56 56-56s56 25.1 56 56l0 128c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-128c0-4.4-3.6-8-8-8z"/></svg></div>
-        <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">高齡化抗生素使用挑戰</h3>
-        <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">探討高齡族群感染治療需求增加所帶來的抗生素累積暴露問題，分析共病、多重用藥及免疫功能下降對抗藥性風險與治療預後的影響。</p>
-      </div>
-      <div style="display: flex; align-items: flex-end; justify-content: center; padding: 12px">
-        <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 160px; height: auto; overflow: visible">
-<path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z" fill="#FFFFFF"></path>
-<path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z" fill="#FFFFFF"></path>
-<path d="M96 236 L96 244 M104 236 L104 244 M156 236 L156 244 M164 236 L164 244" stroke-width="3"></path>
-<g class="xb-head" style="animation-delay: -1.2s">
-<g class="xb-tail" style="animation-delay: -1.2s"><path d="M158 40 C150 14 166 0 182 4 C198 10 190 30 178 42" fill="#FFFFFF"></path></g>
-<path d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z" fill="#FFFFFF"></path>
-<g class="xb-eyes"><circle cx="102" cy="104" r="6.5" fill="#222222" stroke="none"></circle><circle cx="158" cy="104" r="6.5" fill="#222222" stroke="none"></circle></g>
-<ellipse cx="130" cy="108" rx="10" ry="7.5" fill="#222222" stroke="none"></ellipse>
-<path d="M130 114 L130 122 M110 117 Q119 133 130 122 Q141 133 150 117"></path>
-</g>
-</svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team" class="sec">
-  <div class="wrap">
-    <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">About us</div>
-    <h2 class="title">Lab R4211</h2>
-    <p class="desc">歡迎具備公共衛生、流行病學、統計或健康資訊背景的研究生加入。</p>
-    <div class="team-grid">
-      <div class="card hoverlift">
-        <div class="m-frame"><img class="m-photo" src="images/member-yuting.jpg" alt="鈺婷" style="object-position: center top"></div>
-        <div style="padding: 18px 22px 22px">
-          <p class="m-name">鈺婷</p>
-          <p class="m-role">博士研究生</p>
-          <p class="m-note">專長是管理老師時間</p>
-        </div>
-      </div>
-      <div class="card hoverlift">
-        <div class="m-frame"><img class="m-photo" src="images/member-chihshan.jpg" alt="芷姍" style="object-position: center top"></div>
-        <div style="padding: 18px 22px 22px">
-          <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('zhishan')">芷姍<span class="m-hint">研究摘要</span></button>
-          <p class="m-role">碩士研究生</p>
-          <p class="m-note">母親孕前及孕期系統性抗生素處方與新生兒需光療黃疸及足月低出生體重之關聯：2016–2024年臺灣全民健康保險資料庫世代研究</p>
-        </div>
-      </div>
-      <div class="card hoverlift">
-        <div class="m-frame"><img class="m-photo" src="images/member-anshun.jpg" alt="安舜" style="object-position: center 35%"></div>
-        <div style="padding: 18px 22px 22px">
-          <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('anshun')">安舜<span class="m-hint">研究摘要</span></button>
-          <p class="m-role">碩士研究生</p>
-          <p class="m-note">台灣常見呼吸道感染門診之口服抗生素處方型態與時間趨勢：2016–2024年全國性健保申報資料研究</p>
-        </div>
-      </div>
-      <div class="card hoverlift">
-        <div class="m-frame"><img class="m-photo" src="images/member-meijun.jpg" alt="美君" style="object-position: center 35%"></div>
-        <div style="padding: 18px 22px 22px">
-          <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('meijun')">美君<span class="m-hint">研究摘要</span></button>
-          <p class="m-role">在職碩士研究生</p>
-          <p style="font-size: 11.5px; color: #5E5A55; margin-top: 2px">共同指導老師：航太海底所　潘科婷助理教授</p>
-          <p class="m-note">醫院藥局室內空氣品質與工作人員病態建築症候群之相關性研究</p>
-        </div>
-      </div>
-      <div class="card hoverlift">
-        <div class="m-frame"><img class="m-photo" src="images/member-yurong.jpg" alt="妤容" style="object-position: center 40%"></div>
-        <div style="padding: 18px 22px 22px">
-          <button type="button" class="m-btn" title="點擊查看研究成果" onclick="openModal('poster')">妤容<span class="m-hint">研究成果</span></button>
-          <p class="m-role">大學部專題生</p>
-          <p class="m-note">COVID-19疫情對臺灣門診抗生素處方之影響：中斷時間序列分析</p>
-        </div>
-      </div>
-      <div class="card hoverlift" style="background: #FFFDF7; position: relative">
-        <div class="m-frame"><img class="m-photo" src="images/member-xiaobai.jpg" alt="小白" style="object-position: center 85%"></div>
-        <span class="m-badge" style="position: absolute; top: 14px; right: 14px; background: #B42A23; color: #FFFFFF; font-size: 11.5px; font-weight: 900; padding: 3px 12px; border-radius: 999px; border: 2px solid #222222">MASCOT</span>
-        <div style="padding: 18px 22px 22px">
-          <p class="m-name">小白</p>
-          <p class="m-role" style="display: flex; align-items: center; gap: 6px">研究室吉祥物 <img src="images/paw.svg" alt="" aria-hidden="true" style="width: 14px; height: 14px"></p>
-          <p class="m-note">守護 R4211，專長：陪伴、解壓、提升研究室幸福感</p>
-        </div>
-      </div>
-      <div style="border: 3px dashed #222222; border-radius: 26px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 20px; gap: 6px; min-height: 300px; background: #FFFFFF">
-        <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 112px; height: auto; margin-bottom: 8px; overflow: visible">
-<path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z" fill="#FFFFFF"></path>
-<path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z" fill="#FFFFFF"></path>
-<path d="M96 236 L96 244 M104 236 L104 244 M156 236 L156 244 M164 236 L164 244" stroke-width="3"></path>
-<g class="xb-head" style="animation-delay: -2.0s">
-<g class="xb-tail" style="animation-delay: -2.0s"><path d="M158 40 C150 14 166 0 182 4 C198 10 190 30 178 42" fill="#FFFFFF"></path></g>
-<path d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z" fill="#FFFFFF"></path>
-<g class="xb-eyes"><circle cx="102" cy="104" r="6.5" fill="#222222" stroke="none"></circle><circle cx="158" cy="104" r="6.5" fill="#222222" stroke="none"></circle></g>
-<ellipse cx="130" cy="108" rx="10" ry="7.5" fill="#222222" stroke="none"></ellipse>
-<path d="M130 114 L130 122 M110 117 Q119 133 130 122 Q141 133 150 117"></path>
-</g>
-</svg>
-        <p class="m-name" style="color: #B42A23">＋ 加入我們</p>
-        <p class="m-role">歡迎申請</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PUBLICATIONS -->
-<section id="publications" class="sec" style="background: #FFFFFF; border-top: 2px solid #222222; border-bottom: 2px solid #222222">
-  <div class="wrap">
-    <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">發表論文</div>
-    <h2 class="title">Research output</h2>
-    <p class="desc">完整發表清單請見 <a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener" style="font-weight: 800">ResearchGate 個人頁面</a>。</p>
-
-    <p class="sub-label" style="margin-bottom: 1em;width: 120px;padding: 5px;"> 第一作者論文 </p>
-    <div class="card pub-wrap" style="margin-bottom: 44px">
-      <div class="pub-item">
-        <span class="pub-year">2024</span>
-        <div class="pub-body">
-          <h4><a href="https://doi.org/10.3390/antibiotics13060566" target="_blank" rel="noopener">Exploring Prior Antibiotic Exposure Characteristics for COVID-19 Hospital Admission Patients: OpenSAFELY</a></h4>
-          <p class="authors">Yang YT, Wong D, Zhong X, Fahmi A, Ashcroft DM, Hand K, et al.</p>
-          <p class="journal">Antibiotics (Basel) 13(6):566 (2024) · IF 4.3 · PHARMACOLOGY &amp; PHARMACY, Q1, 74/354</p>
-          <div class="tags">
-            <span class="tag">COVID-19</span><span class="tag">OpenSAFELY</span><span class="tag">Antibiotic Exposure</span><span class="tag">Hospitalisation</span>
-            <a class="scite" href="https://scite.ai/reports/10.3390/antibiotics13060566" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
+          <h3><img src="images/paw.svg" alt="" aria-hidden="true">授課科目</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px">
+            <span class="chip">人口與衛生統計學（大學部）</span>
+            <span class="chip">生物統計學 含實習（碩士班）</span>
           </div>
         </div>
       </div>
-      <div class="pub-item">
-        <span class="pub-year">2023</span>
-        <div class="pub-body">
-          <h4><a href="https://doi.org/10.1016/j.eclinm.2023.102064" target="_blank" rel="noopener">Repeated antibiotic exposure and risk of hospitalisation and death following COVID-19 infection (OpenSAFELY): a matched case–control study</a></h4>
-          <p class="authors">Yang YT, Wong D, Ashcroft D, et al.</p>
-          <p class="journal">eClinicalMedicine 61, 102064 (2023) · IF 15.1 · MEDICINE, GENERAL &amp; INTERNAL, Q1, 10/327</p>
-          <div class="tags">
-            <span class="tag">Repeated Exposure</span><span class="tag">COVID-19 Mortality</span><span class="tag">Case-Control</span><span class="tag">OpenSAFELY</span>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="sec"
+      style="background: #FFFFFF; border-top: 2px solid #222222; border-bottom: 2px solid #222222">
+      <div class="wrap">
+        <div class="label"><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">研究方向</div>
+        <h2 class="title">Research interests</h2>
+        <p class="desc">本研究室整合健康資訊學、流行病學與大型資料庫分析，系統性評估抗生素使用模式及其健康後果，涵蓋基層醫療合理用藥、母嬰健康、高齡化抗生素使用挑戰，以及風險為基礎的處方決策策略。</p>
+        <div class="r-grid">
+          <div class="card hoverlift" style="padding: 28px 26px">
+            <div class="r-icon" style="background: #E3EEF9; color: #1D4E89"><svg aria-hidden="true"
+                viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+                <path fill="currentColor"
+                  d="M448 205.8c-14.8 9.8-31.8 17.7-49.5 24-47 16.8-108.7 26.2-174.5 26.2S96.4 246.5 49.5 229.8c-17.6-6.3-34.7-14.2-49.5-24L0 288c0 44.2 100.3 80 224 80s224-35.8 224-80l0-82.2zm0-77.8l0-48C448 35.8 347.7 0 224 0S0 35.8 0 80l0 48c0 44.2 100.3 80 224 80s224-35.8 224-80zM398.5 389.8C351.6 406.5 289.9 416 224 416S96.4 406.5 49.5 389.8c-17.6-6.3-34.7-14.2-49.5-24L0 432c0 44.2 100.3 80 224 80s224-35.8 224-80l0-66.2c-14.8 9.8-31.8 17.7-49.5 24z" />
+              </svg></div>
+            <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">大型資料庫流行病學方法</h3>
+            <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">
+              發展適用於電子病歷與病患資料庫的流行病學分析方法，包含傾向分數匹配、工具變數及時間序列分析。</p>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
-            <a class="press" href="https://www.manchester.ac.uk/about/news/study-links-overuse-of-antibiotics-with-severe-covid-19-side-effects/" target="_blank" rel="noopener">University of Manchester 媒體報導<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
-            <a class="scite" style="margin-top: 10px" href="https://scite.ai/reports/10.1016/j.eclinm.2023.102064" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
+          <div class="card hoverlift" style="padding: 28px 26px">
+            <div class="r-icon" style="background: #FBE3E1; color: #9A231D"><svg aria-hidden="true"
+                viewBox="0 0 576 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+                <path fill="currentColor"
+                  d="M96 112c0-26.5 21.5-48 48-48s48 21.5 48 48l0 112-96 0 0-112zm-64 0l0 288c0 61.9 50.1 112 112 112s112-50.1 112-112l0-105.8 116.3 169.5c35.5 51.7 105.3 64.3 156 28.1s63-107.5 27.5-159.2L427.3 145.3c-35.5-51.7-105.3-64.3-156-28.1-5.6 4-10.7 8.4-15.3 13.1l0-18.3C256 50.1 205.9 0 144 0S32 50.1 32 112zM296.6 240.2c-16-23.3-10-55.3 11.9-71 21.2-15.1 50.5-10.3 66 12.2l67 97.6-79.9 55.9-65-94.8z" />
+              </svg></div>
+            <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">抗生素合理使用與長期健康影響</h3>
+            <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">
+              分析基層醫療常見感染之抗生素處方模式與時間趨勢，探討重複暴露與累積使用對抗藥性、治療成效及健康預後的影響，建立合理使用指標。</p>
+          </div>
+          <div class="card hoverlift" style="padding: 28px 26px">
+            <div class="r-icon" style="background: #FCE6EC; color: #9A2350"><svg aria-hidden="true"
+                viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+                <path fill="currentColor"
+                  d="M192 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112zm80 321.2c8.6-4.5 16.8-10 24.3-16.5l4-3.4c22.6-19.4 35.7-47.7 35.7-77.6 0-35.9-18.8-69.1-49.6-87.6l-30.4-18.2 0-1.8c0-46.5-37.7-84.1-84.1-84.1-28.1 0-54.4 14.1-70 37.5L21.4 270.2c-9.8 14.7-5.8 34.6 8.9 44.4s34.6 5.8 44.4-8.9l29-43.5-30.5 113.5c-2.6 9.6-.6 19.9 5.5 27.8S94 416 104 416l8 0 0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96 32 0 0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-110.8z" />
+              </svg></div>
+            <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">抗生素暴露與母嬰健康</h3>
+            <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">
+              運用臺灣健保研究資料庫，探討孕前及孕期抗生素暴露與新生兒健康預後及子代長期健康之關聯，為孕期用藥安全提供實證依據。</p>
+          </div>
+          <div class="card hoverlift" style="padding: 28px 26px">
+            <div class="r-icon" style="background: #DDF1EE; color: #1B5751"><svg aria-hidden="true"
+                viewBox="0 0 640 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+                <path fill="currentColor"
+                  d="M384 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L398.4 96c-5.2 25.8-22.9 47.1-46.4 57.3l0 294.7 160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-384 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0 0-294.7c-23.5-10.3-41.2-31.6-46.4-57.3L128 96c-17.7 0-32-14.3-32-32s14.3-32 32-32l128 0c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288L584.4 320 512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9zM126.8 195.8L54.4 320 199.3 320 126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1z" />
+              </svg></div>
+            <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">風險為基礎的抗生素處方策略</h3>
+            <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">
+              依據患者年齡、共病、感染類型及過往用藥史，量化個別患者抗生素治療的潛在效益與危害，優化處方決策以促進合理使用。</p>
+          </div>
+          <div class="card hoverlift" style="padding: 28px 26px">
+            <div class="r-icon" style="background: #FFF0DC; color: #8A4B00"><svg aria-hidden="true"
+                viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+                <path fill="currentColor"
+                  d="M232-32a56 56 0 1 1 0 112 56 56 0 1 1 0-112zM144 236.7L97.7 299.1c-10.5 14.2-30.6 17.2-44.8 6.6s-17.2-30.6-6.6-44.8l70.5-95C142 132 181.7 112 224 112s82 20 107.2 53.9l70.5 95c10.5 14.2 7.6 34.2-6.6 44.8s-34.2 7.6-44.8-6.6L304 236.7 304 512c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-275.3zM392 384c-4.4 0-8 3.6-8 8 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-30.9 25.1-56 56-56s56 25.1 56 56l0 128c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-128c0-4.4-3.6-8-8-8z" />
+              </svg></div>
+            <h3 style="font-size: 17px; font-weight: 900; margin-bottom: 8px">高齡化抗生素使用挑戰</h3>
+            <p style="font-size: 13.5px; color: #5E5A55; line-height: 1.8">
+              探討高齡族群感染治療需求增加所帶來的抗生素累積暴露問題，分析共病、多重用藥及免疫功能下降對抗藥性風險與治療預後的影響。</p>
+          </div>
+          <div style="display: flex; align-items: flex-end; justify-content: center; padding: 12px">
+            <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              style="width: 160px; height: auto; overflow: visible">
+              <path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z"
+                fill="#FFFFFF"></path>
+              <path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z"
+                fill="#FFFFFF"></path>
+              <path d="M96 236 L96 244 M104 236 L104 244 M156 236 L156 244 M164 236 L164 244" stroke-width="3"></path>
+              <g class="xb-head" style="animation-delay: -1.2s">
+                <g class="xb-tail" style="animation-delay: -1.2s">
+                  <path d="M158 40 C150 14 166 0 182 4 C198 10 190 30 178 42" fill="#FFFFFF"></path>
+                </g>
+                <path
+                  d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z"
+                  fill="#FFFFFF"></path>
+                <g class="xb-eyes">
+                  <circle cx="102" cy="104" r="6.5" fill="#222222" stroke="none"></circle>
+                  <circle cx="158" cy="104" r="6.5" fill="#222222" stroke="none"></circle>
+                </g>
+                <ellipse cx="130" cy="108" rx="10" ry="7.5" fill="#222222" stroke="none"></ellipse>
+                <path d="M130 114 L130 122 M110 117 Q119 133 130 122 Q141 133 150 117"></path>
+              </g>
+            </svg>
           </div>
         </div>
       </div>
-      <div class="pub-item">
-        <span class="pub-year">2023</span>
-        <div class="pub-body">
-          <h4><a href="https://doi.org/10.1186/s13756-023-01280-6" target="_blank" rel="noopener">The impact of the COVID-19 pandemic on the treatment of common infections in primary care and the change to antibiotic prescribing in England</a></h4>
-          <p class="authors">Yang YT, Zhong X, Fahmi A, et al.</p>
-          <p class="journal">Antimicrobial Resistance &amp; Infection Control 12, 102 (2023) · IF 5.5 · PUBLIC, ENVIRONMENTAL &amp; OCCUPATIONAL HEALTH, Q1, 69/400</p>
-          <div class="tags">
-            <span class="tag">Primary Care</span><span class="tag">Antibiotic Prescribing</span><span class="tag">England</span><span class="tag">Pandemic Impact</span>
-            <a class="scite" href="https://scite.ai/reports/10.1186/s13756-023-01280-6" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="sec">
+      <div class="wrap">
+        <div class="label"><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">About us</div>
+        <h2 class="title">Lab R4211</h2>
+        <p class="desc">歡迎具備公共衛生、流行病學、統計或健康資訊背景的研究生加入。</p>
+        <div class="team-grid">
+          <div class="card hoverlift">
+            <div class="m-frame"><img class="m-photo" src="images/member-yuting.jpg" alt="鈺婷"
+                style="object-position: center top"></div>
+            <div style="padding: 18px 22px 22px">
+              <p class="m-name">鈺婷</p>
+              <p class="m-role">博士研究生</p>
+              <p class="m-note">專長是管理老師時間</p>
+            </div>
+          </div>
+          <div class="card hoverlift">
+            <div class="m-frame"><img class="m-photo" src="images/member-chihshan.jpg" alt="芷姍"
+                style="object-position: center top"></div>
+            <div style="padding: 18px 22px 22px">
+              <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('zhishan')">芷姍<span
+                  class="m-hint">研究摘要</span></button>
+              <p class="m-role">碩士研究生</p>
+              <p class="m-note">母親孕前及孕期系統性抗生素處方與新生兒需光療黃疸及足月低出生體重之關聯：2016–2024年臺灣全民健康保險資料庫世代研究</p>
+            </div>
+          </div>
+          <div class="card hoverlift">
+            <div class="m-frame"><img class="m-photo" src="images/member-anshun.jpg" alt="安舜"
+                style="object-position: center 35%"></div>
+            <div style="padding: 18px 22px 22px">
+              <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('anshun')">安舜<span
+                  class="m-hint">研究摘要</span></button>
+              <p class="m-role">碩士研究生</p>
+              <p class="m-note">台灣常見呼吸道感染門診之口服抗生素處方型態與時間趨勢：2016–2024年全國性健保申報資料研究</p>
+            </div>
+          </div>
+          <div class="card hoverlift">
+            <div class="m-frame"><img class="m-photo" src="images/member-meijun.jpg" alt="美君"
+                style="object-position: center 35%"></div>
+            <div style="padding: 18px 22px 22px">
+              <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('meijun')">美君<span
+                  class="m-hint">研究摘要</span></button>
+              <p class="m-role">在職碩士研究生</p>
+              <p style="font-size: 11.5px; color: #5E5A55; margin-top: 2px">共同指導老師：航太海底所　潘科婷助理教授</p>
+              <p class="m-note">醫院藥局室內空氣品質與工作人員病態建築症候群之相關性研究</p>
+            </div>
+          </div>
+          <div class="card hoverlift">
+            <div class="m-frame"><img class="m-photo" src="images/member-yurong.jpg" alt="妤容"
+                style="object-position: center 40%"></div>
+            <div style="padding: 18px 22px 22px">
+              <button type="button" class="m-btn" title="點擊查看研究成果" onclick="openModal('poster')">妤容<span
+                  class="m-hint">研究成果</span></button>
+              <p class="m-role">大學部專題生</p>
+              <p class="m-note">COVID-19疫情對臺灣門診抗生素處方之影響：中斷時間序列分析</p>
+            </div>
+          </div>
+          <div class="card hoverlift" style="background: #FFFDF7; position: relative">
+            <div class="m-frame"><img class="m-photo" src="images/member-xiaobai.jpg" alt="小白"
+                style="object-position: center 85%"></div>
+            <span class="m-badge"
+              style="position: absolute; top: 14px; right: 14px; background: #B42A23; color: #FFFFFF; font-size: 11.5px; font-weight: 900; padding: 3px 12px; border-radius: 999px; border: 2px solid #222222">MASCOT</span>
+            <div style="padding: 18px 22px 22px">
+              <p class="m-name">小白</p>
+              <p class="m-role" style="display: flex; align-items: center; gap: 6px">研究室吉祥物 <img src="images/paw.svg"
+                  alt="" aria-hidden="true" style="width: 14px; height: 14px"></p>
+              <p class="m-note">守護 R4211，專長：陪伴、解壓、提升研究室幸福感</p>
+            </div>
+          </div>
+          <div
+            style="border: 3px dashed #222222; border-radius: 26px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 20px; gap: 6px; min-height: 300px; background: #FFFFFF">
+            <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              style="width: 112px; height: auto; margin-bottom: 8px; overflow: visible">
+              <path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z"
+                fill="#FFFFFF"></path>
+              <path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z"
+                fill="#FFFFFF"></path>
+              <path d="M96 236 L96 244 M104 236 L104 244 M156 236 L156 244 M164 236 L164 244" stroke-width="3"></path>
+              <g class="xb-head" style="animation-delay: -2.0s">
+                <g class="xb-tail" style="animation-delay: -2.0s">
+                  <path d="M158 40 C150 14 166 0 182 4 C198 10 190 30 178 42" fill="#FFFFFF"></path>
+                </g>
+                <path
+                  d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z"
+                  fill="#FFFFFF"></path>
+                <g class="xb-eyes">
+                  <circle cx="102" cy="104" r="6.5" fill="#222222" stroke="none"></circle>
+                  <circle cx="158" cy="104" r="6.5" fill="#222222" stroke="none"></circle>
+                </g>
+                <ellipse cx="130" cy="108" rx="10" ry="7.5" fill="#222222" stroke="none"></ellipse>
+                <path d="M130 114 L130 122 M110 117 Q119 133 130 122 Q141 133 150 117"></path>
+              </g>
+            </svg>
+            <p class="m-name" style="color: #B42A23">＋ 加入我們</p>
+            <p class="m-role">歡迎申請</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="sec"
+      style="background: #FFFFFF; border-top: 2px solid #222222; border-bottom: 2px solid #222222">
+      <div class="wrap">
+        <div class="label"><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">發表論文</div>
+        <h2 class="title">Research output</h2>
+        <p class="desc">完整發表清單請見 <a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank"
+            rel="noopener" style="font-weight: 800">ResearchGate 個人頁面</a>。</p>
+
+        <p class="sub-label" style="margin-bottom: 1em;width: 120px;padding: 5px;"> 第一作者論文 </p>
+        <div class="card pub-wrap" style="margin-bottom: 44px">
+          <div class="pub-item">
+            <span class="pub-year">2024</span>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.3390/antibiotics13060566" target="_blank" rel="noopener">Exploring Prior
+                  Antibiotic Exposure Characteristics for COVID-19 Hospital Admission Patients: OpenSAFELY</a></h4>
+              <p class="authors">Yang YT, Wong D, Zhong X, Fahmi A, Ashcroft DM, Hand K, et al.</p>
+              <p class="journal">Antibiotics (Basel) 13(6):566 (2024) · IF 4.3 · PHARMACOLOGY &amp; PHARMACY, Q1, 74/354
+              </p>
+              <div class="tags">
+                <span class="tag">COVID-19</span><span class="tag">OpenSAFELY</span><span class="tag">Antibiotic
+                  Exposure</span><span class="tag">Hospitalisation</span>
+                <a class="scite" href="https://scite.ai/reports/10.3390/antibiotics13060566" target="_blank"
+                  rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true">
+                    <use href="#i-arrow" />
+                    <use href="#i-arrow" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub-item">
+            <span class="pub-year">2023</span>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1016/j.eclinm.2023.102064" target="_blank" rel="noopener">Repeated
+                  antibiotic exposure and risk of hospitalisation and death following COVID-19 infection (OpenSAFELY): a
+                  matched case–control study</a></h4>
+              <p class="authors">Yang YT, Wong D, Ashcroft D, et al.</p>
+              <p class="journal">eClinicalMedicine 61, 102064 (2023) · IF 15.1 · MEDICINE, GENERAL &amp; INTERNAL, Q1,
+                10/327</p>
+              <div class="tags">
+                <span class="tag">Repeated Exposure</span><span class="tag">COVID-19 Mortality</span><span
+                  class="tag">Case-Control</span><span class="tag">OpenSAFELY</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+                <a class="press"
+                  href="https://www.manchester.ac.uk/about/news/study-links-overuse-of-antibiotics-with-severe-covid-19-side-effects/"
+                  target="_blank" rel="noopener">University of Manchester 媒體報導<svg class="ext" viewBox="0 0 512 512"
+                    aria-hidden="true">
+                    <use href="#i-arrow" />
+                    <use href="#i-arrow" />
+                  </svg></a>
+                <a class="scite" style="margin-top: 10px" href="https://scite.ai/reports/10.1016/j.eclinm.2023.102064"
+                  target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true">
+                    <use href="#i-arrow" />
+                    <use href="#i-arrow" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub-item">
+            <span class="pub-year">2023</span>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1186/s13756-023-01280-6" target="_blank" rel="noopener">The impact of the
+                  COVID-19 pandemic on the treatment of common infections in primary care and the change to antibiotic
+                  prescribing in England</a></h4>
+              <p class="authors">Yang YT, Zhong X, Fahmi A, et al.</p>
+              <p class="journal">Antimicrobial Resistance &amp; Infection Control 12, 102 (2023) · IF 5.5 · PUBLIC,
+                ENVIRONMENTAL &amp; OCCUPATIONAL HEALTH, Q1, 69/400</p>
+              <div class="tags">
+                <span class="tag">Primary Care</span><span class="tag">Antibiotic Prescribing</span><span
+                  class="tag">England</span><span class="tag">Pandemic Impact</span>
+                <a class="scite" href="https://scite.ai/reports/10.1186/s13756-023-01280-6" target="_blank"
+                  rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true">
+                    <use href="#i-arrow" />
+                    <use href="#i-arrow" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="sub-label" style="background: #1B5751;margin-bottom: 1em;width: 120px;padding: 5px;">共同作者論文</p>
+        <div class="card pub-wrap">
+          <div class="pub-item">
+            <span class="pub-year">2026</span>
+            <div class="pub-body">
+              <h4>Arrhythmia and cardiomyopathy risk in Taiwan with complementary biobank evidence on thyroid genetic
+                susceptibility: an integrative population-based framework</h4>
+              <p class="authors">Lin YC, Huang YC, <strong>Yang YT</strong>, Chuang SW, Weng TH, Tsai CT, et al.</p>
+              <p class="journal">Endocrine Connections 15(8) (2026) · IF 3.4 · Q2</p>
+              <div class="tags">
+                <span class="tag">Arrhythmia</span><span class="tag">Thyroid</span><span class="tag">Biobank</span><span
+                  class="tag">Taiwan</span>
+              </div>
+            </div>
+          </div>
+          <div class="pub-item">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h4>Antibiotics for common infections in primary care before, during and after the COVID-19 pandemic:
+                cohort study of extent of prescribing based on risks of infection-related hospital admissions</h4>
+              <p class="authors">Fahmi A, <strong>Yang YT</strong>, Zhong X, Pate A, et al.</p>
+              <p class="journal">Journal of the Royal Society of Medicine 118(4):126–137 (2025) · IF 16.3 · MEDICINE,
+                GENERAL &amp; INTERNAL, Q1, 18/333</p>
+              <div class="tags">
+                <span class="tag">Prescribing</span><span class="tag">COVID-19</span><span class="tag">Primary
+                  Care</span><span class="tag">Cohort Study</span>
+              </div>
+            </div>
+          </div>
+          <div class="pub-item">
+            <span class="pub-year">2024</span>
+            <div class="pub-body">
+              <h4>Evaluation of the impact of COVID-19 pandemic on hospital admission related to common infections</h4>
+              <p class="authors">Fahmi A, Palin V, Zhong X, <strong>Yang YT</strong>, et al.</p>
+              <p class="journal">PLoS ONE 19(12):e0311515 (2024) · IF 2.9 · MULTIDISCIPLINARY SCIENCES, Q1, 33/135</p>
+              <div class="tags">
+                <span class="tag">Hospital Admission</span><span class="tag">Common Infections</span><span
+                  class="tag">OpenSAFELY</span>
+                <a class="scite" href="https://scite.ai/reports/10.1371/journal.pone.0311515" target="_blank"
+                  rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true">
+                    <use href="#i-arrow" />
+                    <use href="#i-arrow" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub-item">
+            <span class="pub-year">2023</span>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1016/j.lanepe.2023.100653" target="_blank" rel="noopener">Impact of
+                  COVID-19 on broad-spectrum antibiotic prescribing for common infections in primary care in England: a
+                  time-series analyses using OpenSAFELY and effects of predictors including deprivation</a></h4>
+              <p class="authors">Zhong X, Pate A, <strong>Yang YT</strong>, Fahmi A, Ashcroft DM, Goldacre B, et al.</p>
+              <p class="journal">The Lancet Regional Health – Europe 30, 100653 (2023) · IF 20.9 · HEALTH CARE SCIENCES
+                &amp; SERVICES, Q1, 1/168</p>
+              <div class="tags">
+                <span class="tag">Lancet</span><span class="tag">Time-Series</span><span
+                  class="tag">Deprivation</span><span class="tag">OpenSAFELY</span>
+                <a class="scite" href="https://scite.ai/reports/10.1016/j.lanepe.2023.100653" target="_blank"
+                  rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true">
+                    <use href="#i-arrow" />
+                    <use href="#i-arrow" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub-item">
+            <span class="pub-year">2023</span>
+            <div class="pub-body">
+              <h4><a href="https://doi.org/10.1016/J.JINF.2023.05.010" target="_blank" rel="noopener">The impact of
+                  COVID-19 on antibiotic prescribing in primary care in England: Evaluation and risk prediction of
+                  appropriateness of type and repeat prescribing</a></h4>
+              <p class="authors">Zhong X, Pate A, <strong>Yang YT</strong>, Fahmi A, Ashcroft DM, Goldacre B, et al.</p>
+              <p class="journal">Journal of Infection 87(1):1–11 (2023) · IF 28.2 · INFECTIOUS DISEASES, Q1, 4/129</p>
+              <div class="tags">
+                <span class="tag">Risk Prediction</span><span class="tag">Repeat Prescribing</span><span
+                  class="tag">England</span>
+                <a class="scite" href="https://scite.ai/reports/10.1016/j.jinf.2023.05.010" target="_blank"
+                  rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true">
+                    <use href="#i-arrow" />
+                    <use href="#i-arrow" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="more-btn" href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener"
+          style="display: inline-flex; align-items: center; gap: 8px; margin-top: 32px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 2px solid #222222; background: #FFFFFF; color: #222222; font-weight: 800; font-size: 14px; text-decoration: none"><svg
+            class="ext" viewBox="0 0 512 512" aria-hidden="true">
+            <use href="#i-arrow" />
+            <use href="#i-arrow" />
+          </svg>查看完整論文清單（ResearchGate）</a>
+      </div>
+    </section>
+
+    <!-- GRANTS -->
+    <section id="grants" class="sec">
+      <div class="wrap">
+        <div class="label"><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">研究計畫</div>
+        <h2 class="title" style="margin-bottom: 32px">Projects</h2>
+        <div class="card" style="overflow-x: auto; padding: 8px 18px">
+          <table class="g-table">
+            <thead>
+              <tr>
+                <th>期間</th>
+                <th>計畫名稱</th>
+                <th>補助單位</th>
+                <th style="text-align: center">角色</th>
+                <th style="text-align: right; display: none">補助金額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: #5E5A55; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700">
+                  2026/1–2026/12</td>
+                <td style="font-weight: 700">常見感染症開立抗生素之風險效益評估 <span
+                    style="font-size: 12px; color: #B42A23; font-weight: 900">1/3</span></td>
+                <td style="color: #5E5A55; white-space: nowrap">國防醫學研究</td>
+                <td style="text-align: center"><span class="pi-tag">PI</span></td>
+              </tr>
+              <tr>
+                <td style="color: #5E5A55; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700">
+                  2025/2–2025/3</td>
+                <td style="font-weight: 700">邀請曼徹斯特大學 Prof. Tjeerd van Staa 來臺學術訪問<br><span
+                    style="font-size: 12px; color: #5E5A55; font-weight: 400">補助編號 114-2912-I-016-505</span></td>
+                <td style="color: #5E5A55; white-space: nowrap">國家科學及技術委員會</td>
+                <td style="text-align: center"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="sec" style="background: #FFFFFF; border-top: 2px solid #222222; padding-bottom: 180px">
+      <div class="wrap">
+        <div class="label"><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">最新消息</div>
+        <h2 class="title" style="margin-bottom: 32px">Press/Media</h2>
+        <div class="card pub-wrap">
+          <div class="pub-item">
+            <span class="pub-year" style="background: #B42A23">2023-07</span>
+            <div class="pub-body">
+              <h4><a
+                  href="https://www.manchester.ac.uk/about/news/study-links-overuse-of-antibiotics-with-severe-covid-19-side-effects/"
+                  target="_blank" rel="noopener">Study links overuse of antibiotics with severe COVID-19 side
+                  effects</a></h4>
+              <p class="authors" style="font-style: normal">University of Manchester 官方新聞室 · 2023 年 7 月 5 日</p>
+              <p style="font-size: 13.5px; color: #4E4A45; line-height: 1.85; margin-top: 6px">報導本室 eClinicalMedicine
+                研究成果：運用 NHS OpenSAFELY 平台分析 67 萬名 COVID-19 患者，發現過去三年內抗生素使用頻率越高、種類越多，與 COVID-19 住院及死亡風險顯著相關。研究涵蓋 55
+                種抗生素，住院最高風險組勝算比達 1.8 倍。</p>
+              <div class="tags">
+                <span class="tag tag-red">媒體報導</span><span class="tag">OpenSAFELY</span><span
+                  class="tag">COVID-19</span><span class="tag">Antibiotic Overuse</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="sec" style="background: #222222; color: #EDEAE3">
+      <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true"
+        style="position: absolute; top: -137px; right: 12%; width: 152px; height: auto; overflow: visible">
+        <path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z" fill="#FFFFFF">
+        </path>
+        <path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z"
+          fill="#FFFFFF"></path>
+        <path d="M96 236 L96 244 M104 236 L104 244 M156 236 L156 244 M164 236 L164 244" stroke-width="3"></path>
+        <g class="xb-head" style="animation-delay: -0.9s">
+          <g class="xb-tail" style="animation-delay: -0.9s">
+            <path d="M158 40 C150 14 166 0 182 4 C198 10 190 30 178 42" fill="#FFFFFF"></path>
+          </g>
+          <path
+            d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z"
+            fill="#FFFFFF"></path>
+          <g class="xb-eyes">
+            <circle cx="102" cy="104" r="6.5" fill="#222222" stroke="none"></circle>
+            <circle cx="158" cy="104" r="6.5" fill="#222222" stroke="none"></circle>
+          </g>
+          <ellipse cx="130" cy="108" rx="10" ry="7.5" fill="#222222" stroke="none"></ellipse>
+          <path d="M130 114 L130 122 M110 117 Q119 133 130 122 Q141 133 150 117"></path>
+        </g>
+      </svg>
+      <div class="wrap">
+        <div class="label" style="color: #F4ABA5"><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">聯絡我們</div>
+        <h2 class="title" style="color: #FFFFFF">合作與加入</h2>
+        <p class="desc" style="color: #C9C4BB">歡迎對抗生素流行病學、健康服務研究或抗藥性議題有興趣的研究者聯繫，討論合作機會或申請加入實驗室。</p>
+        <div class="contact-grid">
+          <div class="c-block">
+            <h4>地址</h4>
+            <address>
+              <p>國防醫學大學 公共衛生學院</p>
+              <p>114 台北市內湖區民權東路六段161號 R4211</p>
+              <p>電話 02-8792-3100 分機 18443</p>
+            </address>
+          </div>
+          <div class="c-block">
+            <h4>電子郵件</h4>
+            <p><a href="mailto:yang@mail.ndmctsgh.edu.tw">yang@mail.ndmctsgh.edu.tw</a></p>
+          </div>
+          <div class="c-block">
+            <h4>學術連結</h4>
+            <p><a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank"
+                rel="noopener">ResearchGate</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background: #161616; padding: 24px 0; border-top: 1px solid #333333">
+      <div class="wrap"
+        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 12.5px; color: #A8A39B">
+        <p>© 2026 健康服務評估及抗生素流行病學研究室 · 國防醫學大學</p>
+        <p><a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener"
+            style="color: #F4ABA5; text-decoration: none">ResearchGate</a> · <a href="mailto:yang@mail.ndmctsgh.edu.tw"
+            style="color: #F4ABA5; text-decoration: none">聯絡我們</a></p>
+      </div>
+    </footer>
+
+    <!-- POSTER MODAL -->
+
+    <div class="overlay" id="modal-poster" hidden role="dialog" aria-modal="true" onclick="closeModal()"
+      style="align-items: center">
+      <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"
+        style="position: fixed; top: 16px; right: 20px"><svg aria-hidden="true"
+          viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+          <path fill="currentColor"
+            d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
+        </svg></button>
+      <img class="poster-img" src="images/poster-yurong.webp" alt="廖妤容研究成果海報" onclick="event.stopPropagation()">
+    </div>
+
+
+    <!-- ZHISHAN ABSTRACT MODAL -->
+
+    <div class="overlay" id="modal-zhishan" hidden role="dialog" aria-modal="true" onclick="closeModal()">
+      <div class="a-card" onclick="event.stopPropagation()">
+        <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"><svg aria-hidden="true"
+            viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+            <path fill="currentColor"
+              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
+          </svg></button>
+        <div class="a-head">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">
+          <div>
+            <p class="a-title">母親孕前及孕期系統性抗生素處方與新生兒需光療黃疸及足月低出生體重之關聯</p>
+            <p class="a-sub">陳芷姍 · 碩士研究生 · 健康服務評估及抗生素流行病學研究室</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #E3EEF9"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>研究背景與重要性</h4>
+            <p>
+              抗生素為妊娠期間常見之處方藥物，廣泛應用於母體細菌感染之治療與預防。然而，孕期抗生素處方與子代健康預後之關聯，可能受到暴露時間、藥物類別、累積暴露程度及母體感染適應症等因素影響。既有研究對孕期抗生素暴露與新生兒黃疸及出生體重之關聯尚未具有一致結論，且不同研究之暴露定義與混雜因子控制方式存在差異。臺灣全民健康保險研究資料庫具有長期就醫及處方申報紀錄，可用於評估孕前及孕期抗生素暴露與新生兒不良預後之關聯，提供孕期用藥安全與婦幼健康照護之實證參考。
+            </p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #FFF0DC"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>研究目的</h4>
+            <p>探討母親孕前一年及妊娠期間系統性抗生素處方，與子代需光療新生兒黃疸及足月低出生體重之關聯，並評估抗生素類別、累積暴露量及感染適應症之影響。</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #DDF1EE"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>研究方法</h4>
+            <p>採回溯性世代研究，使用2014至2024年全民健康保險研究資料庫，建立2016至2024年單胎活產母嬰世代。利用住院申報、新生兒依附就醫及承保資料連結母嬰，並參考階層式演算法推估末次月經日與孕週。以WHO
+              ATC
+              J01類辨識系統性抗生素，劃分孕前一年與三孕期暴露窗口，計算處方率、藥物類別、抗菌光譜、累積處方天數及定義每日劑量（DDD）。需光療黃疸定義為出生後28天內黃疸診斷合併光療醫令；足月低出生體重定義為估計孕週達37週且具出生體重低於2500公克之診斷碼。以改良式Poisson迴歸估計調整後相對風險及95%信賴區間，並進行感染適應症分層、逆機率治療加權與敏感度分析。
+            </p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #EFE6F6"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>關鍵字</h4>
+            <div class="a-kw"><span class="tag">孕期抗生素</span><span class="tag">需光療新生兒黃疸</span><span
+                class="tag">足月低出生體重</span><span class="tag">全民健康保險研究資料庫</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <p class="sub-label" style="background: #1B5751;margin-bottom: 1em;width: 120px;padding: 5px;">共同作者論文</p>
-    <div class="card pub-wrap">
-      <div class="pub-item">
-        <span class="pub-year">2026</span>
-        <div class="pub-body">
-          <h4>Arrhythmia and cardiomyopathy risk in Taiwan with complementary biobank evidence on thyroid genetic susceptibility: an integrative population-based framework</h4>
-          <p class="authors">Lin YC, Huang YC, <strong>Yang YT</strong>, Chuang SW, Weng TH, Tsai CT, et al.</p>
-          <p class="journal">Endocrine Connections 15(8) (2026) · IF 3.4 · Q2</p>
-          <div class="tags">
-            <span class="tag">Arrhythmia</span><span class="tag">Thyroid</span><span class="tag">Biobank</span><span class="tag">Taiwan</span>
-          </div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <span class="pub-year">2025</span>
-        <div class="pub-body">
-          <h4>Antibiotics for common infections in primary care before, during and after the COVID-19 pandemic: cohort study of extent of prescribing based on risks of infection-related hospital admissions</h4>
-          <p class="authors">Fahmi A, <strong>Yang YT</strong>, Zhong X, Pate A, et al.</p>
-          <p class="journal">Journal of the Royal Society of Medicine 118(4):126–137 (2025) · IF 16.3 · MEDICINE, GENERAL &amp; INTERNAL, Q1, 18/333</p>
-          <div class="tags">
-            <span class="tag">Prescribing</span><span class="tag">COVID-19</span><span class="tag">Primary Care</span><span class="tag">Cohort Study</span>
-          </div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <span class="pub-year">2024</span>
-        <div class="pub-body">
-          <h4>Evaluation of the impact of COVID-19 pandemic on hospital admission related to common infections</h4>
-          <p class="authors">Fahmi A, Palin V, Zhong X, <strong>Yang YT</strong>, et al.</p>
-          <p class="journal">PLoS ONE 19(12):e0311515 (2024) · IF 2.9 · MULTIDISCIPLINARY SCIENCES, Q1, 33/135</p>
-          <div class="tags">
-            <span class="tag">Hospital Admission</span><span class="tag">Common Infections</span><span class="tag">OpenSAFELY</span>
-            <a class="scite" href="https://scite.ai/reports/10.1371/journal.pone.0311515" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
-          </div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <span class="pub-year">2023</span>
-        <div class="pub-body">
-          <h4><a href="https://doi.org/10.1016/j.lanepe.2023.100653" target="_blank" rel="noopener">Impact of COVID-19 on broad-spectrum antibiotic prescribing for common infections in primary care in England: a time-series analyses using OpenSAFELY and effects of predictors including deprivation</a></h4>
-          <p class="authors">Zhong X, Pate A, <strong>Yang YT</strong>, Fahmi A, Ashcroft DM, Goldacre B, et al.</p>
-          <p class="journal">The Lancet Regional Health – Europe 30, 100653 (2023) · IF 20.9 · HEALTH CARE SCIENCES &amp; SERVICES, Q1, 1/168</p>
-          <div class="tags">
-            <span class="tag">Lancet</span><span class="tag">Time-Series</span><span class="tag">Deprivation</span><span class="tag">OpenSAFELY</span>
-            <a class="scite" href="https://scite.ai/reports/10.1016/j.lanepe.2023.100653" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
-          </div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <span class="pub-year">2023</span>
-        <div class="pub-body">
-          <h4><a href="https://doi.org/10.1016/J.JINF.2023.05.010" target="_blank" rel="noopener">The impact of COVID-19 on antibiotic prescribing in primary care in England: Evaluation and risk prediction of appropriateness of type and repeat prescribing</a></h4>
-          <p class="authors">Zhong X, Pate A, <strong>Yang YT</strong>, Fahmi A, Ashcroft DM, Goldacre B, et al.</p>
-          <p class="journal">Journal of Infection 87(1):1–11 (2023) · IF 28.2 · INFECTIOUS DISEASES, Q1, 4/129</p>
-          <div class="tags">
-            <span class="tag">Risk Prediction</span><span class="tag">Repeat Prescribing</span><span class="tag">England</span>
-            <a class="scite" href="https://scite.ai/reports/10.1016/j.jinf.2023.05.010" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <a class="more-btn" href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 32px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 2px solid #222222; background: #FFFFFF; color: #222222; font-weight: 800; font-size: 14px; text-decoration: none"><svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg>查看完整論文清單（ResearchGate）</a>
-  </div>
-</section>
+    <!-- MEIJUN ABSTRACT MODAL -->
 
-<!-- GRANTS -->
-<section id="grants" class="sec">
-  <div class="wrap">
-    <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">研究計畫</div>
-    <h2 class="title" style="margin-bottom: 32px">Projects</h2>
-    <div class="card" style="overflow-x: auto; padding: 8px 18px">
-      <table class="g-table">
-        <thead>
-          <tr>
-            <th>期間</th>
-            <th>計畫名稱</th>
-            <th>補助單位</th>
-            <th style="text-align: center">角色</th>
-            <th style="text-align: right; display: none">補助金額</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="color: #5E5A55; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700">2026/1–2026/12</td>
-            <td style="font-weight: 700">常見感染症開立抗生素之風險效益評估 <span style="font-size: 12px; color: #B42A23; font-weight: 900">1/3</span></td>
-            <td style="color: #5E5A55; white-space: nowrap">國防醫學研究</td>
-            <td style="text-align: center"><span class="pi-tag">PI</span></td>
-            <td style="text-align: right; display: none">NT$ 440,000</td>
-          </tr>
-          <tr>
-            <td style="color: #5E5A55; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700">2025/2–2025/3</td>
-            <td style="font-weight: 700">邀請曼徹斯特大學 Prof. Tjeerd van Staa 來臺學術訪問<br><span style="font-size: 12px; color: #5E5A55; font-weight: 400">補助編號 114-2912-I-016-505</span></td>
-            <td style="color: #5E5A55; white-space: nowrap">國家科學及技術委員會</td>
-            <td style="text-align: center"><span class="pi-tag">PI</span></td>
-            <td style="text-align: right; display: none">NT$ 21,818</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- NEWS -->
-<section id="news" class="sec" style="background: #FFFFFF; border-top: 2px solid #222222; padding-bottom: 180px">
-  <div class="wrap">
-    <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">最新消息</div>
-    <h2 class="title" style="margin-bottom: 32px">Press/Media</h2>
-    <div class="card pub-wrap">
-      <div class="pub-item">
-        <span class="pub-year" style="background: #B42A23">2023-07</span>
-        <div class="pub-body">
-          <h4><a href="https://www.manchester.ac.uk/about/news/study-links-overuse-of-antibiotics-with-severe-covid-19-side-effects/" target="_blank" rel="noopener">Study links overuse of antibiotics with severe COVID-19 side effects</a></h4>
-          <p class="authors" style="font-style: normal">University of Manchester 官方新聞室 · 2023 年 7 月 5 日</p>
-          <p style="font-size: 13.5px; color: #4E4A45; line-height: 1.85; margin-top: 6px">報導本室 eClinicalMedicine 研究成果：運用 NHS OpenSAFELY 平台分析 67 萬名 COVID-19 患者，發現過去三年內抗生素使用頻率越高、種類越多，與 COVID-19 住院及死亡風險顯著相關。研究涵蓋 55 種抗生素，住院最高風險組勝算比達 1.8 倍。</p>
-          <div class="tags">
-            <span class="tag tag-red">媒體報導</span><span class="tag">OpenSAFELY</span><span class="tag">COVID-19</span><span class="tag">Antibiotic Overuse</span>
+    <div class="overlay" id="modal-meijun" hidden role="dialog" aria-modal="true" onclick="closeModal()">
+      <div class="a-card" onclick="event.stopPropagation()">
+        <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"><svg aria-hidden="true"
+            viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+            <path fill="currentColor"
+              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
+          </svg></button>
+        <div class="a-head">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">
+          <div>
+            <p class="a-title">醫院藥局室內空氣品質與工作人員病態建築症候群之相關性研究</p>
+            <p class="a-sub">歐美君 · 在職碩士研究生 · 健康服務評估及抗生素流行病學研究室</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #E3EEF9"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>研究背景</h4>
+            <p>
+              醫院藥局具有不同的空間功能、作業型態、人員密度及通風條件，其室內空氣品質可能隨工作場域與時間而產生差異。工作人員長時間處於室內環境，除可能受到溫度、相對濕度、二氧化碳、細懸浮微粒及總揮發性有機化合物等環境因子影響外，對音、空間、光、溫熱及空氣環境之主觀感受，亦可能與疲勞、頭痛、眼睛刺激、呼吸道及皮膚不適等病態建築症候群（Sick
+              Building Syndrome,
+              SBS）症狀相關。然而，既有醫院室內空氣品質研究多集中於病房、手術室及重症照護單位，針對醫院藥局不同工作場域進行長期監測，並整合工作人員主觀環境感受與SBS症狀之研究仍相對有限。</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #FFF0DC"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>研究目的</h4>
+            <p>
+              描述及比較醫院藥局不同工作場域之室內空氣品質特性及其時間變化，探討研究對象之人口學與工作特性、個人感受、相關認知及主觀環境感受與心率、整體SBS有無及一般、眼睛、呼吸道與皮膚症狀程度之關聯，並針對同時具有監測及問卷資料之工作場域，探索場域層級室內空氣品質特性與SBS分布之可能關係。
+            </p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #DDF1EE"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>研究方法</h4>
+            <p>
+              採橫斷式問卷調查結合回溯性室內空氣品質監測資料之觀察性研究設計。監測資料為2024年9月至2025年8月於北部某醫學中心藥學部8個場域（化療藥局、中藥局、住院藥局、臨床試驗藥局、門診藥局、門診大廳、藥物諮詢室及總藥師辦公室）之連續監測，指標包含溫度、相對濕度、CO₂、PM₂.₅及TVOC。問卷調查最終納入44份有效問卷，資料以非參數統計為主（Mann–Whitney
+              U、Kruskal–Wallis、Spearman等級相關、Fisher精確檢定），顯著水準α＝0.05。</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #FCE6EC"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>預期結果與貢獻</h4>
+            <p>
+              預期不同藥局工作場域之室內空氣品質指標呈現不同時間與空間分布特性；人口學特性、個人感受、主觀環境感受與SBS症狀程度可能呈現不同程度之關聯。研究結果可作為醫院藥局室內環境管理、工作人員健康促進及後續職業健康研究之參考。
+            </p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #EFE6F6"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>關鍵詞</h4>
+            <div class="a-kw"><span class="tag">室內空氣品質</span><span class="tag">醫院藥局</span><span
+                class="tag">病態建築症候群</span></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="sec" style="background: #222222; color: #EDEAE3">
-  <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; top: -137px; right: 12%; width: 152px; height: auto; overflow: visible">
-<path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z" fill="#FFFFFF"></path>
-<path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z" fill="#FFFFFF"></path>
-<path d="M96 236 L96 244 M104 236 L104 244 M156 236 L156 244 M164 236 L164 244" stroke-width="3"></path>
-<g class="xb-head" style="animation-delay: -0.9s">
-<g class="xb-tail" style="animation-delay: -0.9s"><path d="M158 40 C150 14 166 0 182 4 C198 10 190 30 178 42" fill="#FFFFFF"></path></g>
-<path d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z" fill="#FFFFFF"></path>
-<g class="xb-eyes"><circle cx="102" cy="104" r="6.5" fill="#222222" stroke="none"></circle><circle cx="158" cy="104" r="6.5" fill="#222222" stroke="none"></circle></g>
-<ellipse cx="130" cy="108" rx="10" ry="7.5" fill="#222222" stroke="none"></ellipse>
-<path d="M130 114 L130 122 M110 117 Q119 133 130 122 Q141 133 150 117"></path>
-</g>
-</svg>
-  <div class="wrap">
-    <div class="label" style="color: #F4ABA5"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">聯絡我們</div>
-    <h2 class="title" style="color: #FFFFFF">合作與加入</h2>
-    <p class="desc" style="color: #C9C4BB">歡迎對抗生素流行病學、健康服務研究或抗藥性議題有興趣的研究者聯繫，討論合作機會或申請加入實驗室。</p>
-    <div class="contact-grid">
-      <div class="c-block">
-        <h4>地址</h4>
-        <address>
-          <p>國防醫學大學 公共衛生學院</p>
-          <p>114 台北市內湖區民權東路六段161號 R4211</p>
-          <p>電話 02-8792-3100 分機 18443</p>
-        </address>
-      </div>
-      <div class="c-block">
-        <h4>電子郵件</h4>
-        <p><a href="mailto:yang@mail.ndmctsgh.edu.tw">yang@mail.ndmctsgh.edu.tw</a></p>
-      </div>
-      <div class="c-block">
-        <h4>學術連結</h4>
-        <p><a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener">ResearchGate</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer style="background: #161616; padding: 24px 0; border-top: 1px solid #333333">
-  <div class="wrap" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 12.5px; color: #A8A39B">
-    <p>© 2026 健康服務評估及抗生素流行病學研究室 · 國防醫學大學</p>
-    <p><a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener" style="color: #F4ABA5; text-decoration: none">ResearchGate</a> · <a href="mailto:yang@mail.ndmctsgh.edu.tw" style="color: #F4ABA5; text-decoration: none">聯絡我們</a></p>
-  </div>
-</footer>
-
-<!-- POSTER MODAL -->
-
-  <div class="overlay" id="modal-poster" hidden role="dialog" aria-modal="true" onclick="closeModal()" style="align-items: center">
-    <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()" style="position: fixed; top: 16px; right: 20px"><svg aria-hidden="true" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
-    <img class="poster-img" src="images/poster-yurong.webp" alt="廖妤容研究成果海報" onclick="event.stopPropagation()">
-  </div>
 
 
-<!-- ZHISHAN ABSTRACT MODAL -->
+    <!-- PI THESIS MODAL -->
 
-  <div class="overlay" id="modal-zhishan" hidden role="dialog" aria-modal="true" onclick="closeModal()">
-    <div class="a-card" onclick="event.stopPropagation()">
-      <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"><svg aria-hidden="true" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
-      <div class="a-head">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">
-        <div>
-          <p class="a-title">母親孕前及孕期系統性抗生素處方與新生兒需光療黃疸及足月低出生體重之關聯</p>
-          <p class="a-sub">陳芷姍 · 碩士研究生 · 健康服務評估及抗生素流行病學研究室</p>
+    <div class="overlay" id="modal-thesis" hidden role="dialog" aria-modal="true" onclick="closeModal()">
+      <div class="a-card" onclick="event.stopPropagation()">
+        <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"><svg aria-hidden="true"
+            viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+            <path fill="currentColor"
+              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
+          </svg></button>
+        <div class="a-head">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">
+          <div>
+            <p class="a-title">Clinical outcomes following antibiotic use in primary care: evaluating the benefits,
+              harms, and risk factors for hospital admission</p>
+            <p class="a-sub">Ya-Ting Yang · PhD Thesis · University of Manchester, UK · 2024</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #E3EEF9"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>Background</h4>
+            <p>Antibiotic use is a critical global health issue, as increased consumption is strongly linked to
+              antimicrobial resistance (AMR). Repeated intermittent use of antibiotics is associated with adverse health
+              outcomes, likely due to treatment failures from resistant strains or disruption of gut microbiota. In the
+              UK, the majority of antibiotics are prescribed in primary care, and the COVID-19 pandemic may have altered
+              infection management in this setting.</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #FFF0DC"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>Research Aims</h4>
+            <p>This thesis aimed to: (1) evaluate primary care antibiotic treatment pathways during the COVID-19
+              pandemic; (2) investigate the relationship between antibiotic exposure and severe COVID-19 outcomes; (3)
+              explore detailed antibiotic exposure characteristics related to COVID-19 hospitalisation; and (4) simulate
+              the benefits and harms of antibiotic prescribing using number-needed-to-treat (NNT).</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #DDF1EE"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>Data Sources</h4>
+            <p>Two primary care databases were utilised: The Phoenix Partnership (TPP) EHR via
+              <strong>OpenSAFELY</strong>, covering 40% of the population in England, and the <strong>Clinical Practice
+                Research Datalink Aurum (CPRD Aurum)</strong>, covering 20% of the UK population.</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #FCE6EC"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>Key Findings &amp; Conclusions</h4>
+            <p>The COVID-19 pandemic significantly impacted primary care prescribing practices. While bacterial
+              co-infections are uncommon in COVID-19 patients, they are linked to higher mortality, and repeated
+              antibiotic exposure may contribute to severe outcomes, possibly due to gut microbiota disruption and AMR.
+              This thesis highlights the importance of antibiotic stewardship programmes to carefully balance clinical
+              benefits and potential harms, especially given their minimal effectiveness in reducing hospital admissions
+              for conditions such as cough and sore throat. These findings emphasise the need to re-evaluate routine
+              antibiotic prescribing and develop tailored guidance that considers individual antibiotic history.</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #EFE6F6"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>Keywords</h4>
+            <div class="a-kw"><span class="tag">Antibiotic Stewardship</span><span class="tag">Antimicrobial
+                Resistance</span><span class="tag">COVID-19</span><span class="tag">Primary Care</span><span
+                class="tag">OpenSAFELY</span><span class="tag">CPRD Aurum</span><span class="tag">NNT</span></div>
+          </div>
         </div>
       </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #E3EEF9"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>研究背景與重要性</h4><p>抗生素為妊娠期間常見之處方藥物，廣泛應用於母體細菌感染之治療與預防。然而，孕期抗生素處方與子代健康預後之關聯，可能受到暴露時間、藥物類別、累積暴露程度及母體感染適應症等因素影響。既有研究對孕期抗生素暴露與新生兒黃疸及出生體重之關聯尚未具有一致結論，且不同研究之暴露定義與混雜因子控制方式存在差異。臺灣全民健康保險研究資料庫具有長期就醫及處方申報紀錄，可用於評估孕前及孕期抗生素暴露與新生兒不良預後之關聯，提供孕期用藥安全與婦幼健康照護之實證參考。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #FFF0DC"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>研究目的</h4><p>探討母親孕前一年及妊娠期間系統性抗生素處方，與子代需光療新生兒黃疸及足月低出生體重之關聯，並評估抗生素類別、累積暴露量及感染適應症之影響。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #DDF1EE"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>研究方法</h4><p>採回溯性世代研究，使用2014至2024年全民健康保險研究資料庫，建立2016至2024年單胎活產母嬰世代。利用住院申報、新生兒依附就醫及承保資料連結母嬰，並參考階層式演算法推估末次月經日與孕週。以WHO ATC J01類辨識系統性抗生素，劃分孕前一年與三孕期暴露窗口，計算處方率、藥物類別、抗菌光譜、累積處方天數及定義每日劑量（DDD）。需光療黃疸定義為出生後28天內黃疸診斷合併光療醫令；足月低出生體重定義為估計孕週達37週且具出生體重低於2500公克之診斷碼。以改良式Poisson迴歸估計調整後相對風險及95%信賴區間，並進行感染適應症分層、逆機率治療加權與敏感度分析。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #EFE6F6"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>關鍵字</h4><div class="a-kw"><span class="tag">孕期抗生素</span><span class="tag">需光療新生兒黃疸</span><span class="tag">足月低出生體重</span><span class="tag">全民健康保險研究資料庫</span></div></div>
-      </div>
     </div>
-  </div>
 
 
-<!-- MEIJUN ABSTRACT MODAL -->
+    <!-- ANSHUN ABSTRACT MODAL -->
 
-  <div class="overlay" id="modal-meijun" hidden role="dialog" aria-modal="true" onclick="closeModal()">
-    <div class="a-card" onclick="event.stopPropagation()">
-      <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"><svg aria-hidden="true" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
-      <div class="a-head">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">
-        <div>
-          <p class="a-title">醫院藥局室內空氣品質與工作人員病態建築症候群之相關性研究</p>
-          <p class="a-sub">歐美君 · 在職碩士研究生 · 健康服務評估及抗生素流行病學研究室</p>
+    <div class="overlay" id="modal-anshun" hidden role="dialog" aria-modal="true" onclick="closeModal()">
+      <div class="a-card" onclick="event.stopPropagation()">
+        <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"><svg aria-hidden="true"
+            viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. -->
+            <path fill="currentColor"
+              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
+          </svg></button>
+        <div class="a-head">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg=="
+            alt="" aria-hidden="true">
+          <div>
+            <p class="a-title">台灣常見呼吸道感染門診之口服抗生素處方型態與時間趨勢：2016–2024年全國性健保申報資料研究</p>
+            <p class="a-sub">劉安舜 · 碩士研究生 · 健康服務評估及抗生素流行病學研究室</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #E3EEF9"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>研究背景</h4>
+            <p>抗生素使用量監測可呈現整體用藥變化，但難以區分感染就診量、患者人口學特性、處方比例及處方內容的影響。本研究旨在描述台灣常見呼吸道感染門診之口服抗生素處方型態與時間趨勢，並比較不同醫療機構層級、年齡及性別的差異。
+            </p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #DDF1EE"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>研究方法</h4>
+            <p>
+              本研究為回溯性觀察研究，擬使用2016–2024年全民健康保險研究資料庫全檔申報資料，納入全年齡於醫學中心、區域醫院、地區醫院及基層診所的上呼吸道感染、鼻竇炎與下呼吸道感染門診。以就診為分析單位，串接門診申報、醫令及院所資料，依藥品清單辨識口服全身性抗生素。研究將呈現每月處方比例、年度藥物組成、處方型抗生素藥物日數（DOT）及抗生素光譜涵蓋天數（DASC），各指標依所需資料完整性界定分母。另以限制立方樣條羅吉斯迴歸描繪年齡—性別處方曲線，採病人群集穩健標準誤，並進行遠距醫療次分析及年齡性別標準化補充比較。
+            </p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #FCE6EC"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>預期貢獻</h4>
+            <p>預期建立具一致操作定義的全國性門診處方基準，呈現感染別處方比例、藥物選擇與光譜涵蓋量的變化，供後續抗生素管理及處方行為研究參考。</p>
+          </div>
+        </div>
+        <div class="a-sec">
+          <div class="a-icon" style="background: #EFE6F6"><img src="images/paw.svg" alt="" aria-hidden="true"
+              style="width: 20px"></div>
+          <div class="a-body">
+            <h4>關鍵字</h4>
+            <div class="a-kw"><span class="tag">呼吸道感染</span><span class="tag">口服抗生素</span><span
+                class="tag">處方型態</span><span class="tag">抗生素光譜涵蓋天數</span><span class="tag">全民健康保險研究資料庫</span></div>
+          </div>
         </div>
       </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #E3EEF9"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>研究背景</h4><p>醫院藥局具有不同的空間功能、作業型態、人員密度及通風條件，其室內空氣品質可能隨工作場域與時間而產生差異。工作人員長時間處於室內環境，除可能受到溫度、相對濕度、二氧化碳、細懸浮微粒及總揮發性有機化合物等環境因子影響外，對音、空間、光、溫熱及空氣環境之主觀感受，亦可能與疲勞、頭痛、眼睛刺激、呼吸道及皮膚不適等病態建築症候群（Sick Building Syndrome, SBS）症狀相關。然而，既有醫院室內空氣品質研究多集中於病房、手術室及重症照護單位，針對醫院藥局不同工作場域進行長期監測，並整合工作人員主觀環境感受與SBS症狀之研究仍相對有限。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #FFF0DC"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>研究目的</h4><p>描述及比較醫院藥局不同工作場域之室內空氣品質特性及其時間變化，探討研究對象之人口學與工作特性、個人感受、相關認知及主觀環境感受與心率、整體SBS有無及一般、眼睛、呼吸道與皮膚症狀程度之關聯，並針對同時具有監測及問卷資料之工作場域，探索場域層級室內空氣品質特性與SBS分布之可能關係。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #DDF1EE"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>研究方法</h4><p>採橫斷式問卷調查結合回溯性室內空氣品質監測資料之觀察性研究設計。監測資料為2024年9月至2025年8月於北部某醫學中心藥學部8個場域（化療藥局、中藥局、住院藥局、臨床試驗藥局、門診藥局、門診大廳、藥物諮詢室及總藥師辦公室）之連續監測，指標包含溫度、相對濕度、CO₂、PM₂.₅及TVOC。問卷調查最終納入44份有效問卷，資料以非參數統計為主（Mann–Whitney U、Kruskal–Wallis、Spearman等級相關、Fisher精確檢定），顯著水準α＝0.05。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #FCE6EC"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>預期結果與貢獻</h4><p>預期不同藥局工作場域之室內空氣品質指標呈現不同時間與空間分布特性；人口學特性、個人感受、主觀環境感受與SBS症狀程度可能呈現不同程度之關聯。研究結果可作為醫院藥局室內環境管理、工作人員健康促進及後續職業健康研究之參考。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #EFE6F6"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>關鍵詞</h4><div class="a-kw"><span class="tag">室內空氣品質</span><span class="tag">醫院藥局</span><span class="tag">病態建築症候群</span></div></div>
-      </div>
     </div>
+
+
   </div>
-
-
-<!-- PI THESIS MODAL -->
-
-  <div class="overlay" id="modal-thesis" hidden role="dialog" aria-modal="true" onclick="closeModal()">
-    <div class="a-card" onclick="event.stopPropagation()">
-      <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"><svg aria-hidden="true" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
-      <div class="a-head">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">
-        <div>
-          <p class="a-title">Clinical outcomes following antibiotic use in primary care: evaluating the benefits, harms, and risk factors for hospital admission</p>
-          <p class="a-sub">Ya-Ting Yang · PhD Thesis · University of Manchester, UK · 2024</p>
-        </div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #E3EEF9"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>Background</h4><p>Antibiotic use is a critical global health issue, as increased consumption is strongly linked to antimicrobial resistance (AMR). Repeated intermittent use of antibiotics is associated with adverse health outcomes, likely due to treatment failures from resistant strains or disruption of gut microbiota. In the UK, the majority of antibiotics are prescribed in primary care, and the COVID-19 pandemic may have altered infection management in this setting.</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #FFF0DC"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>Research Aims</h4><p>This thesis aimed to: (1) evaluate primary care antibiotic treatment pathways during the COVID-19 pandemic; (2) investigate the relationship between antibiotic exposure and severe COVID-19 outcomes; (3) explore detailed antibiotic exposure characteristics related to COVID-19 hospitalisation; and (4) simulate the benefits and harms of antibiotic prescribing using number-needed-to-treat (NNT).</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #DDF1EE"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>Data Sources</h4><p>Two primary care databases were utilised: The Phoenix Partnership (TPP) EHR via <strong>OpenSAFELY</strong>, covering 40% of the population in England, and the <strong>Clinical Practice Research Datalink Aurum (CPRD Aurum)</strong>, covering 20% of the UK population.</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #FCE6EC"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>Key Findings &amp; Conclusions</h4><p>The COVID-19 pandemic significantly impacted primary care prescribing practices. While bacterial co-infections are uncommon in COVID-19 patients, they are linked to higher mortality, and repeated antibiotic exposure may contribute to severe outcomes, possibly due to gut microbiota disruption and AMR. This thesis highlights the importance of antibiotic stewardship programmes to carefully balance clinical benefits and potential harms, especially given their minimal effectiveness in reducing hospital admissions for conditions such as cough and sore throat. These findings emphasise the need to re-evaluate routine antibiotic prescribing and develop tailored guidance that considers individual antibiotic history.</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #EFE6F6"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>Keywords</h4><div class="a-kw"><span class="tag">Antibiotic Stewardship</span><span class="tag">Antimicrobial Resistance</span><span class="tag">COVID-19</span><span class="tag">Primary Care</span><span class="tag">OpenSAFELY</span><span class="tag">CPRD Aurum</span><span class="tag">NNT</span></div></div>
-      </div>
-    </div>
-  </div>
-
-
-<!-- ANSHUN ABSTRACT MODAL -->
-
-  <div class="overlay" id="modal-anshun" hidden role="dialog" aria-modal="true" onclick="closeModal()">
-    <div class="a-card" onclick="event.stopPropagation()">
-      <button type="button" class="a-close" aria-label="關閉" onclick="closeModal()"><svg aria-hidden="true" viewBox="0 0 384 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button>
-      <div class="a-head">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">
-        <div>
-          <p class="a-title">台灣常見呼吸道感染門診之口服抗生素處方型態與時間趨勢：2016–2024年全國性健保申報資料研究</p>
-          <p class="a-sub">劉安舜 · 碩士研究生 · 健康服務評估及抗生素流行病學研究室</p>
-        </div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #E3EEF9"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>研究背景</h4><p>抗生素使用量監測可呈現整體用藥變化，但難以區分感染就診量、患者人口學特性、處方比例及處方內容的影響。本研究旨在描述台灣常見呼吸道感染門診之口服抗生素處方型態與時間趨勢，並比較不同醫療機構層級、年齡及性別的差異。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #DDF1EE"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>研究方法</h4><p>本研究為回溯性觀察研究，擬使用2016–2024年全民健康保險研究資料庫全檔申報資料，納入全年齡於醫學中心、區域醫院、地區醫院及基層診所的上呼吸道感染、鼻竇炎與下呼吸道感染門診。以就診為分析單位，串接門診申報、醫令及院所資料，依藥品清單辨識口服全身性抗生素。研究將呈現每月處方比例、年度藥物組成、處方型抗生素藥物日數（DOT）及抗生素光譜涵蓋天數（DASC），各指標依所需資料完整性界定分母。另以限制立方樣條羅吉斯迴歸描繪年齡—性別處方曲線，採病人群集穩健標準誤，並進行遠距醫療次分析及年齡性別標準化補充比較。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #FCE6EC"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>預期貢獻</h4><p>預期建立具一致操作定義的全國性門診處方基準，呈現感染別處方比例、藥物選擇與光譜涵蓋量的變化，供後續抗生素管理及處方行為研究參考。</p></div>
-      </div>
-      <div class="a-sec">
-        <div class="a-icon" style="background: #EFE6F6"><img src="images/paw.svg" alt="" aria-hidden="true" style="width: 20px"></div>
-        <div class="a-body"><h4>關鍵字</h4><div class="a-kw"><span class="tag">呼吸道感染</span><span class="tag">口服抗生素</span><span class="tag">處方型態</span><span class="tag">抗生素光譜涵蓋天數</span><span class="tag">全民健康保險研究資料庫</span></div></div>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-<script>
-var modalOpener=null;
-function hideOverlay(m){if(m._done){clearTimeout(m._done.t);m.removeEventListener('animationend',m._done);m._done=null;}m.classList.remove('m-closing');m.hidden=true;}
-function openModal(k){var m=document.getElementById('modal-'+k);if(!m)return;document.querySelectorAll('.overlay').forEach(hideOverlay);modalOpener=document.activeElement;m.hidden=false;document.body.classList.add('modal-open');var b=m.querySelector('.a-close');if(b)b.focus();}
-/* 關閉：motion.css 有退場動畫就播完再隱藏，沒有（或減少動態）就立刻隱藏；焦點還給開啟彈窗的按鈕 */
-function closeModal(){
-  var open=[].filter.call(document.querySelectorAll('.overlay'),function(m){return !m.hidden&&!m.classList.contains('m-closing');});
-  if(!open.length)return;
-  document.body.classList.remove('modal-open');
-  open.forEach(function(m){
-    m.classList.add('m-closing');
-    if(getComputedStyle(m).animationName==='none')return hideOverlay(m);
-    var done=function(e){if(!e||e.target===m)hideOverlay(m);};
-    done.t=setTimeout(done,600);m._done=done;
-    m.addEventListener('animationend',done);
-  });
-  if(modalOpener&&modalOpener.focus)modalOpener.focus({preventScroll:true});
-  modalOpener=null;
-}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
-</script>
-<script>
-(function(){
-var sc=document.querySelector('.nav-links'),pv=document.querySelector('.nav-prev'),nx=document.querySelector('.nav-next');
-if(!sc||!pv||!nx)return;
-function upd(){var m=sc.scrollWidth-sc.clientWidth;pv.hidden=sc.scrollLeft<=4;nx.hidden=m<=4||sc.scrollLeft>=m-4;}
-pv.addEventListener('click',function(){sc.scrollBy({left:-sc.clientWidth*.6,behavior:'smooth'})});
-nx.addEventListener('click',function(){sc.scrollBy({left:sc.clientWidth*.6,behavior:'smooth'})});
-sc.addEventListener('scroll',upd,{passive:true});
-window.addEventListener('resize',upd);
-upd();
-})();
-</script>
-<script src="motion.js" onerror="document.documentElement.classList.remove('motion')"></script>
+  <script>
+    var modalOpener = null;
+    function hideOverlay(m) { if (m._done) { clearTimeout(m._done.t); m.removeEventListener('animationend', m._done); m._done = null; } m.classList.remove('m-closing'); m.hidden = true; }
+    function openModal(k) { var m = document.getElementById('modal-' + k); if (!m) return; document.querySelectorAll('.overlay').forEach(hideOverlay); modalOpener = document.activeElement; m.hidden = false; document.body.classList.add('modal-open'); var b = m.querySelector('.a-close'); if (b) b.focus(); }
+    /* 關閉：motion.css 有退場動畫就播完再隱藏，沒有（或減少動態）就立刻隱藏；焦點還給開啟彈窗的按鈕 */
+    function closeModal() {
+      var open = [].filter.call(document.querySelectorAll('.overlay'), function (m) { return !m.hidden && !m.classList.contains('m-closing'); });
+      if (!open.length) return;
+      document.body.classList.remove('modal-open');
+      open.forEach(function (m) {
+        m.classList.add('m-closing');
+        if (getComputedStyle(m).animationName === 'none') return hideOverlay(m);
+        var done = function (e) { if (!e || e.target === m) hideOverlay(m); };
+        done.t = setTimeout(done, 600); m._done = done;
+        m.addEventListener('animationend', done);
+      });
+      if (modalOpener && modalOpener.focus) modalOpener.focus({ preventScroll: true });
+      modalOpener = null;
+    }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+  </script>
+  <script>
+    (function () {
+      var sc = document.querySelector('.nav-links'), pv = document.querySelector('.nav-prev'), nx = document.querySelector('.nav-next');
+      if (!sc || !pv || !nx) return;
+      function upd() { var m = sc.scrollWidth - sc.clientWidth; pv.hidden = sc.scrollLeft <= 4; nx.hidden = m <= 4 || sc.scrollLeft >= m - 4; }
+      pv.addEventListener('click', function () { sc.scrollBy({ left: -sc.clientWidth * .6, behavior: 'smooth' }) });
+      nx.addEventListener('click', function () { sc.scrollBy({ left: sc.clientWidth * .6, behavior: 'smooth' }) });
+      sc.addEventListener('scroll', upd, { passive: true });
+      window.addEventListener('resize', upd);
+      upd();
+    })();
+  </script>
+  <script src="motion.js" onerror="document.documentElement.classList.remove('motion')"></script>
 </body>
+
 </html>
