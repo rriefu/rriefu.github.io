@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -18 262 262">
+<!-- 研究室吉祥物小白頭像（同導覽列 logo 的造型，線條加粗以便在 16–48px 辨識） -->
+<path d="M70 40 C110 26 150 26 190 40 C225 38 252 60 250 92 C248 118 232 132 214 128 L210 176 C210 190 200 196 186 196 L74 196 C60 196 50 190 50 176 L46 128 C28 132 12 118 10 92 C8 60 35 38 70 40 Z" fill="#FFFFFF" stroke="#222222" stroke-width="16" stroke-linejoin="round"/>
+<circle cx="102" cy="104" r="13" fill="#222222"/>
+<circle cx="158" cy="104" r="13" fill="#222222"/>
+<ellipse cx="130" cy="109" rx="15" ry="11" fill="#222222"/>
+<path d="M130 119 L130 127 M107 121 Q118.5 140 130 127 Q141.5 140 153 121" fill="none" stroke="#222222" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

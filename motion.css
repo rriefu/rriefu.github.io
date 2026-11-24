@@ -1,0 +1,146 @@
+/* =========================================================
+   motion.css — 健康服務評估及抗生素流行病學研究室網站的動態層（搭配 motion.js）
+   效果配方取自 Motion Library（motion-library.html），依本站元素改寫；
+   註解括號內是動態庫裡的 id。
+   要回到靜態版：刪掉 index.html 裡載入 motion.css、motion.js 與加上 html.motion 的三處。
+   html.motion 只在使用者「沒有」開啟減少動態時才會加上。
+   ========================================================= */
+:root{--m-out:cubic-bezier(.2,.8,.2,1);--m-spring:cubic-bezier(.34,1.56,.64,1);--m-bounce:cubic-bezier(.3,1.6,.5,1)}
+
+@keyframes m-rise{from{opacity:0;transform:translateY(24px)}}
+@keyframes m-cascade{from{opacity:0;transform:translate(-14px,26px) scale(.94)}}
+@keyframes m-fade{from{opacity:0}}
+@keyframes m-pop{0%{opacity:0;transform:scale(.3)}45%{opacity:1;transform:scale(1.12)}65%{transform:scale(.95)}82%{transform:scale(1.02)}100%{transform:scale(1)}}
+@keyframes m-dot{0%{transform:scale(0)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
+@keyframes m-nod{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-12deg)}55%{transform:rotate(8deg)}80%{transform:rotate(-3deg)}}
+@keyframes m-stamp{
+  0%{opacity:0;transform:scale(2.3) rotate(-24deg);animation-timing-function:cubic-bezier(.6,0,.9,.5)}
+  38%{opacity:1;transform:scale(.9) rotate(0deg);animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  58%{transform:scale(1.06) rotate(0deg)}
+  78%{transform:scale(.98) rotate(0deg)}
+  100%{transform:scale(1) rotate(0deg)}}
+@keyframes m-ring{from{opacity:.9;transform:scale(.9)}to{opacity:0;transform:scale(1.6)}}
+@keyframes m-drop{
+  0%{opacity:0;transform:translateY(-48px) rotate(-7deg);animation-timing-function:cubic-bezier(.5,0,.9,.4)}
+  55%{opacity:1;transform:translateY(0) rotate(3.2deg);animation-timing-function:cubic-bezier(.2,.8,.3,1)}
+  78%{transform:translateY(-5px) rotate(1.4deg);animation-timing-function:ease-in-out}
+  100%{transform:translateY(0) rotate(2deg)}}
+@keyframes m-develop{from{filter:grayscale(1) brightness(.55)}to{filter:grayscale(0) brightness(1)}}
+@keyframes m-hop{
+  0%{opacity:0;transform:translateY(-90px) scale(1,1);animation-timing-function:cubic-bezier(.55,0,1,.45)}
+  40%{opacity:1;transform:translateY(0) scale(1,1);animation-timing-function:ease-out}
+  50%{transform:translateY(0) scale(1.14,.84);animation-timing-function:ease-out}
+  68%{transform:translateY(-16px) scale(.95,1.06);animation-timing-function:ease-in}
+  84%{transform:translateY(0) scale(1.04,.96);animation-timing-function:ease-out}
+  100%{transform:translateY(0) scale(1,1)}}
+@keyframes m-overlay-in{from{opacity:0}}
+@keyframes m-overlay-out{to{opacity:0}}
+@keyframes m-card-in{from{opacity:0;transform:translateY(24px) scale(.94)}}
+@keyframes m-card-out{to{opacity:0;transform:translateY(16px) scale(.92)}}
+@keyframes m-burst-ring{from{opacity:.9;transform:scale(.3)}to{opacity:0;transform:scale(1.7)}}
+@keyframes m-heart{0%{opacity:0;transform:translate(0,0) scale(.3)}18%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(.9)}}
+
+/* 列印時不套用任何先藏後現，內容全部照常印出 */
+@media screen{
+
+/* ---------- 先藏後現：清單要和 motion.js 的 REVEAL 一致 ---------- */
+.motion :where(.sec .label,.sec .title,.sec .desc,.about-grid>div>.card,.about-body>p,.about-body h3,.tl li,.chip,.r-grid>*,.team-grid>*,#grants .card,.sub-label,.pub-item,.more-btn,.c-block,#contact>.xb-dog):not(.m-in){opacity:0}
+
+/* 段落浮現（lay-section-fadeup）：--d 由 motion.js 依同一批進場元素的列、欄名次算出 */
+.motion .m-in{animation:m-rise .6s var(--m-out) var(--d,0ms) backwards}
+/* 斜向瀑布（crd-grid-cascade）：研究方向卡、成員卡 */
+.motion :where(.r-grid,.team-grid)>.m-in{animation-name:m-cascade;animation-duration:.65s}
+/* 彈跳就位（btn-spring-pop）：授課科目 */
+.motion .chip.m-in{animation-name:m-pop;animation-timing-function:ease-out}
+/* 區塊標題旁的小白頭點一下（同導覽列 logo 的點頭） */
+.motion .label.m-in img{transform-origin:50% 85%;animation:m-nod .8s ease-in-out calc(var(--d,0ms) + .25s) backwards}
+/* 時間軸圓點彈出 */
+.motion .tl li.m-in .tl-dot{animation:m-dot .45s ease-out calc(var(--d,0ms) + .18s) backwards}
+
+/* 徽章蓋印（shp-badge-stamp）：MASCOT 標章、研究計畫的 PI，落地時盪出一圈紅環 */
+.motion .pi-tag{position:relative}
+.motion :where(.team-grid>.m-in .m-badge,#grants .card.m-in .pi-tag){animation:m-stamp .62s ease-out calc(var(--d,0ms) + var(--sd,.36s)) backwards}
+.motion :where(.team-grid>.m-in .m-badge,#grants .card.m-in .pi-tag)::after{content:"";position:absolute;inset:-5px;border:2px solid #B42A23;border-radius:999px;opacity:0;pointer-events:none;animation:m-ring .5s ease-out calc(var(--d,0ms) + var(--sd,.36s) + .24s)}
+.motion #grants tbody tr+tr .pi-tag{--sd:.5s}
+
+/* ---------- 主視覺開場 ----------
+   膠囊、標題、說明依序浮現，標籤彈出；立牌像拍立得落下顯影（med-instant-develop）；
+   對話框彈出（btn-spring-pop）；小白跳進來（txt-gravity-drop）；腳印一步步出現 */
+.motion #home:not(.m-on) :where(.hero-pill,.hero-title,.hero-desc,.badge),
+.motion .hero-visual:not(.m-on) :where(.hero-standee,.hero-bubble,.xb-dog),
+.motion .paws:not(.m-on) img{opacity:0}
+.motion #home.m-on .hero-pill{animation:m-rise .6s var(--m-out) backwards}
+.motion #home.m-on .hero-title{animation:m-rise .7s var(--m-out) .08s backwards}
+.motion #home.m-on .hero-desc{animation:m-rise .7s var(--m-out) .18s backwards}
+.motion #home.m-on .badge{animation:m-pop .7s ease-out calc(.34s + var(--i,0) * 70ms) backwards}
+.motion .hero-visual.m-on .hero-standee{animation:m-drop .95s .12s backwards,m-develop 1.7s ease-out .12s backwards}
+.motion .hero-visual.m-on .hero-bubble{transform-origin:18% 100%;animation:m-pop .65s ease-out .8s backwards}
+.motion .hero-visual.m-on .xb-dog{animation:m-hop .8s .95s backwards}
+.motion .paws.m-on img{animation:m-fade .5s ease-out calc(.5s + var(--i,0) * 100ms) backwards}
+
+/* ---------- 小白 ----------
+   點了會冒愛心（btn-heart-burst，見 motion.js）；聯絡區那隻捲到時跳上邊緣（txt-gravity-drop） */
+.motion .xb-dog{transform-origin:50% 100%;cursor:pointer}
+.motion #contact>.xb-dog.m-in{animation:m-hop .8s var(--d,0ms) backwards}
+
+/* 螢光筆跟捲（txt-scroll-highlighter）：motion.js 依捲動把 --hl 從 0 寫到 1，塗過就保留 */
+.motion .about-body strong{background:linear-gradient(#FBE3E1,#FBE3E1) 0 100%/calc(var(--hl,0) * 100%) 38% no-repeat}
+
+/* 機場翻板（txt-solari-board）：論文年份每格翻過幾個數字才停下 */
+.motion .pub-year.m-flipping{position:relative;color:transparent}
+.m-flap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#FFFFFF;perspective:120px}
+.m-flap span{display:inline-block}
+
+/* 框內推近（crd-zoom-inside）：成員照片在框內慢慢推近 */
+.motion .m-photo{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.motion .team-grid .card:hover .m-photo{transform:scale(1.07)}}
+
+/* 箭頭穿越（shp-arrow-pass）：外部連結的箭頭往右上飛出，新的一支從左下補上 */
+.motion :is(a:hover,a:focus-visible)>.ext use:first-child{transform:translateX(560px);transition:transform .35s cubic-bezier(.6,0,.3,1)}
+.motion :is(a:hover,a:focus-visible)>.ext use:last-child{transform:translateX(0);transition:transform .35s cubic-bezier(.6,0,.3,1) .12s}
+
+/* 鍵帽按壓（btn-keycap）：滑過浮起、按下把影子壓平、放開回彈 */
+.motion :where(.more-btn,.about-grid .card a,.about-grid .card button){transition:transform .26s var(--m-bounce),box-shadow .26s var(--m-bounce)}
+@media (hover:hover){
+  .motion .more-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #222222}
+  .motion :where(.about-grid .card a,.about-grid .card button):hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 #222222}
+}
+.motion .more-btn:active{transform:translate(4px,4px);box-shadow:0 0 0 #222222;transition-duration:.08s}
+.motion :where(.about-grid .card a,.about-grid .card button):active{transform:translate(1px,1px);box-shadow:0 0 0 #222222;transition-duration:.08s}
+
+/* 彈窗開關（lay-modal-dismiss）：index.html 的 closeModal() 加上 .m-closing，退場播完才隱藏 */
+.motion .overlay:not([hidden]){animation:m-overlay-in .24s ease-out}
+.motion .overlay:not([hidden])>:where(.a-card,.poster-img){animation:m-card-in .42s var(--m-spring)}
+.motion .overlay.m-closing{animation:m-overlay-out .3s cubic-bezier(.4,0,1,1) .05s forwards}
+.motion .overlay.m-closing>:where(.a-card,.poster-img){animation:m-card-out .26s cubic-bezier(.4,0,1,1) forwards}
+
+/* 愛心迸發（btn-heart-burst） */
+.m-burst{position:absolute;left:0;top:0;width:0;height:0;pointer-events:none;z-index:55}
+.m-burst i{position:absolute;left:-28px;top:-28px;width:56px;height:56px;box-sizing:border-box;border:3px solid #F4ABA5;border-radius:50%;animation:m-burst-ring .55s ease-out forwards}
+.m-burst span{position:absolute;left:-8px;top:-8px;width:16px;height:16px;animation:m-heart .8s var(--m-out) forwards}
+.m-burst svg{display:block;width:100%;height:100%;fill:currentColor}
+
+}
+
+/* ---------- 以下是功能，減少動態時也保留，只是不滑動 ---------- */
+
+/* 目錄跟讀（lay-scrollspy）：淡紅膠囊滑到目前讀到的段落 */
+.nav-links.m-spy{position:relative}
+.nav-links.m-spy a{position:relative;z-index:1}
+.nav-links a[aria-current]{color:#9A231D}
+.nav-links a[aria-current]:hover{background:transparent}
+.m-nav-ind{position:absolute;left:0;top:0;z-index:0;box-sizing:border-box;border:2px solid #222222;border-radius:999px;background:#FBE3E1;opacity:0;pointer-events:none;transition:transform .3s cubic-bezier(.3,.7,.2,1),width .3s cubic-bezier(.3,.7,.2,1),height .3s cubic-bezier(.3,.7,.2,1),opacity .2s}
+.m-nav-ind.on{opacity:1}
+
+/* 回頂按鈕（lay-back-top）：捲過一個畫面才彈出，外圈紅環是閱讀進度 */
+.m-totop{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:60;box-sizing:border-box;width:54px;height:54px;padding:0;border:2px solid #222222;border-radius:50%;background:#FFFFFF;box-shadow:3px 3px 0 #222222;display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(16px) scale(.6);transition:opacity .3s,transform .32s var(--m-spring),box-shadow .2s,visibility 0s .32s}
+.m-totop.show{opacity:1;visibility:visible;transform:none;transition:opacity .3s,transform .32s var(--m-spring),box-shadow .2s}
+@media (hover:hover){.m-totop.show:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #222222}}
+.m-totop.show:active{transform:translate(3px,3px);box-shadow:0 0 0 #222222;transition-duration:.08s}
+.m-totop:focus-visible{outline:3px solid #B42A23;outline-offset:3px}
+.m-totop img{position:relative;width:22px;height:22px}
+.m-totop svg{position:absolute;inset:3px;width:calc(100% - 6px);height:calc(100% - 6px);transform:rotate(-90deg)}
+.m-totop circle{fill:none;stroke:#B42A23;stroke-width:3;stroke-linecap:round}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.m-nav-ind,.m-totop{transition:none}}
+@media print{.m-totop{display:none}}

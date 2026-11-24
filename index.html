@@ -17,6 +17,8 @@
 <meta name="twitter:title" content="健康服務評估及抗生素流行病學研究室">
 <meta name="twitter:description" content="抗生素使用、抗藥性與長期健康影響大型資料庫流行病學研究">
 <meta name="twitter:image" content="https://rriefu.github.io/download.jpeg">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap">
 <style>
 body{margin:0}
@@ -55,6 +57,8 @@ a{color:#B42A23}a:hover{color:#8E1F1A}
 .scite:hover{background:#DDF1EE;color:#1B5751}
 .press{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:12.5px;font-weight:800;color:#9A231D;text-decoration:none;padding:5px 13px;border:2px solid #9A231D;border-radius:999px;background:#FFFFFF}
 .press:hover{background:#FBE3E1;color:#9A231D}
+.ext{width:1em;height:1em;flex:none;transform:rotate(-45deg);fill:currentColor}
+.ext use:last-child{transform:translateX(-560px)}
 .about-grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:56px;align-items:start}
 .about-body h3{font-size:20px;font-weight:900;margin:40px 0 16px;display:flex;align-items:center;gap:10px}
 .about-body h3 img{width:18px;height:18px}
@@ -71,7 +75,8 @@ a{color:#B42A23}a:hover{color:#8E1F1A}
 .r-icon{width:52px;height:52px;border-radius:18px;border:2px solid #222222;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .r-icon svg{width:26px;height:26px;overflow:visible}
 .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:26px}
-.m-photo{width:100%;height:230px;object-fit:cover;display:block;border-bottom:2px solid #222222;border-radius:24px 24px 0 0}
+.m-frame{overflow:hidden;border-bottom:2px solid #222222;border-radius:24px 24px 0 0}
+.m-photo{width:100%;height:230px;object-fit:cover;display:block}
 .m-name{font-family:'Noto Sans TC',sans-serif;font-size:18px;font-weight:900;line-height:1.4}
 .m-btn{font:inherit;font-family:'Noto Sans TC',sans-serif;font-size:18px;font-weight:900;color:#222222;background:none;border:0;padding:0 0 1px;border-bottom:3px dotted #B42A23;cursor:pointer;line-height:1.4;min-height:30px}
 .m-btn:hover{color:#B42A23}
@@ -90,6 +95,7 @@ a{color:#B42A23}a:hover{color:#8E1F1A}
 .journal{font-size:13px;font-weight:800;color:#1B5751}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
 .sub-label{display:flex;width:fit-content;align-items:center;justify-content:center;text-align:center;gap:8px;font-size:13px;font-weight:900;letter-spacing:.1em;color:#FFFFFF;background:#B42A23;border:2px solid #222222;border-radius:999px;padding:6px 28px;margin:0 0 1em}
+.more-btn{box-shadow:4px 4px 0 #222222}
 .g-table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
 .g-table th{text-align:left;padding:14px 16px;font-size:12px;font-weight:900;letter-spacing:.1em;color:#5E5A55;border-bottom:3px solid #222222;white-space:nowrap}
 .g-table td{padding:18px 16px;border-bottom:2px dashed #D9D4C9;vertical-align:top;line-height:1.6}
@@ -165,9 +171,12 @@ section{scroll-margin-top:84px}
 .overlay[hidden]{display:none}
 body.modal-open{overflow:hidden}
 </style>
+<link rel="stylesheet" href="motion.css">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')</script>
 </head>
 <body>
 <div class="xb">
+<svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc. --><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol></svg>
 
 <!-- NAV -->
 <nav class="nav">
@@ -200,9 +209,9 @@ body.modal-open{overflow:hidden}
 <section id="home" style="padding: 72px 0 96px; background: #FFFFFF; border-bottom: 2px solid #222222; position: relative; overflow: hidden">
   <div class="wrap hero-grid" style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; align-items: center">
     <div>
-      <p style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 900; letter-spacing: .14em; color: #1B5751; background: #DDF1EE; border: 2px solid #222222; border-radius: 999px; padding: 5px 16px; margin-bottom: 24px">國防醫學大學 · 公共衛生學院</p>
+      <p class="hero-pill" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 900; letter-spacing: .14em; color: #1B5751; background: #DDF1EE; border: 2px solid #222222; border-radius: 999px; padding: 5px 16px; margin-bottom: 24px">國防醫學大學 · 公共衛生學院</p>
       <h1 class="hero-title" style="font-size: 46px; font-weight: 900; line-height: 1.28; letter-spacing: -.01em; margin-bottom: 24px">抗生素使用、抗藥性<br><span style="color: #B42A23">與長期健康影響</span><br>大型資料庫流行病學研究</h1>
-      <p style="font-size: 15.5px; color: #4E4A45; line-height: 1.95; max-width: 560px; margin-bottom: 30px">本研究室運用大型醫療資料庫與流行病學方法，評估基層醫療抗生素合理使用及其長期健康影響，探討不同族群如高齡者及孕婦之抗生素暴露風險與健康預後，並建立以風險為基礎的抗生素處方決策策略，以因應全球抗藥性公衛威脅。</p>
+      <p class="hero-desc" style="font-size: 15.5px; color: #4E4A45; line-height: 1.95; max-width: 560px; margin-bottom: 30px">本研究室運用大型醫療資料庫與流行病學方法，評估基層醫療抗生素合理使用及其長期健康影響，探討不同族群如高齡者及孕婦之抗生素暴露風險與健康預後，並建立以風險為基礎的抗生素處方決策策略，以因應全球抗藥性公衛威脅。</p>
       <div style="display: flex; flex-wrap: wrap; gap: 10px">
         <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">大型資料庫流行病學</span>
         <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">抗生素合理使用</span>
@@ -211,10 +220,10 @@ body.modal-open{overflow:hidden}
         <span class="badge"><img src="images/paw.svg" alt="" aria-hidden="true">高齡化抗生素使用挑戰</span>
       </div>
     </div>
-    <div style="display: flex; justify-content: center; position: relative">
+    <div class="hero-visual" style="display: flex; justify-content: center; position: relative">
       <div style="position: relative; width: 100%; max-width: 400px">
-        <div style="position: absolute; top: -18px; left: -8px; z-index: 2; background: #FFFFFF; border: 2px solid #222222; border-radius: 20px; padding: 8px 16px; font-size: 15px; font-weight: 900; box-shadow: 3px 3px 0 #222222">汪！歡迎來到 R4211</div>
-        <img src="images/mascot-standee.png" alt="研究室吉祥物小白的紙板立牌" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border: 2px solid #222222; border-radius: 32px; box-shadow: 8px 8px 0 #222222; transform: rotate(2deg); background: #F1EEE6">
+        <div class="hero-bubble" style="position: absolute; top: -18px; left: -8px; z-index: 2; background: #FFFFFF; border: 2px solid #222222; border-radius: 20px; padding: 8px 16px; font-size: 15px; font-weight: 900; box-shadow: 3px 3px 0 #222222">汪！歡迎來到 R4211</div>
+        <img class="hero-standee" src="images/mascot-standee.png" alt="研究室吉祥物小白的紙板立牌" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border: 2px solid #222222; border-radius: 32px; box-shadow: 8px 8px 0 #222222; transform: rotate(2deg); background: #F1EEE6">
         <svg class="xb-dog" viewBox="-12 -12 284 266" fill="none" stroke="#222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: -34px; bottom: -46px; width: 136px; height: auto; overflow: visible">
 <path d="M84 186 L84 232 C84 240 90 244 100 244 L110 244 C118 244 120 238 120 232 L120 186 Z" fill="#FFFFFF"></path>
 <path d="M140 186 L140 232 C140 240 144 244 152 244 L162 244 C170 244 176 240 176 232 L176 186 Z" fill="#FFFFFF"></path>
@@ -352,7 +361,7 @@ body.modal-open{overflow:hidden}
     <p class="desc">歡迎具備公共衛生、流行病學、統計或健康資訊背景的研究生加入。</p>
     <div class="team-grid">
       <div class="card hoverlift">
-        <img class="m-photo" src="images/member-yuting.jpg" alt="鈺婷" style="object-position: center top">
+        <div class="m-frame"><img class="m-photo" src="images/member-yuting.jpg" alt="鈺婷" style="object-position: center top"></div>
         <div style="padding: 18px 22px 22px">
           <p class="m-name">鈺婷</p>
           <p class="m-role">博士研究生</p>
@@ -360,7 +369,7 @@ body.modal-open{overflow:hidden}
         </div>
       </div>
       <div class="card hoverlift">
-        <img class="m-photo" src="images/member-chihshan.jpg" alt="芷姍" style="object-position: center top">
+        <div class="m-frame"><img class="m-photo" src="images/member-chihshan.jpg" alt="芷姍" style="object-position: center top"></div>
         <div style="padding: 18px 22px 22px">
           <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('zhishan')">芷姍<span class="m-hint">研究摘要</span></button>
           <p class="m-role">碩士研究生</p>
@@ -368,7 +377,7 @@ body.modal-open{overflow:hidden}
         </div>
       </div>
       <div class="card hoverlift">
-        <img class="m-photo" src="images/member-anshun.jpg" alt="安舜" style="object-position: center 35%">
+        <div class="m-frame"><img class="m-photo" src="images/member-anshun.jpg" alt="安舜" style="object-position: center 35%"></div>
         <div style="padding: 18px 22px 22px">
           <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('anshun')">安舜<span class="m-hint">研究摘要</span></button>
           <p class="m-role">碩士研究生</p>
@@ -376,7 +385,7 @@ body.modal-open{overflow:hidden}
         </div>
       </div>
       <div class="card hoverlift">
-        <img class="m-photo" src="images/member-meijun.jpg" alt="美君" style="object-position: center 35%">
+        <div class="m-frame"><img class="m-photo" src="images/member-meijun.jpg" alt="美君" style="object-position: center 35%"></div>
         <div style="padding: 18px 22px 22px">
           <button type="button" class="m-btn" title="點擊查看研究摘要" onclick="openModal('meijun')">美君<span class="m-hint">研究摘要</span></button>
           <p class="m-role">在職碩士研究生</p>
@@ -385,7 +394,7 @@ body.modal-open{overflow:hidden}
         </div>
       </div>
       <div class="card hoverlift">
-        <img class="m-photo" src="images/member-yurong.jpg" alt="妤容" style="object-position: center 40%">
+        <div class="m-frame"><img class="m-photo" src="images/member-yurong.jpg" alt="妤容" style="object-position: center 40%"></div>
         <div style="padding: 18px 22px 22px">
           <button type="button" class="m-btn" title="點擊查看研究成果" onclick="openModal('poster')">妤容<span class="m-hint">研究成果</span></button>
           <p class="m-role">大學部專題生</p>
@@ -393,8 +402,8 @@ body.modal-open{overflow:hidden}
         </div>
       </div>
       <div class="card hoverlift" style="background: #FFFDF7; position: relative">
-        <img class="m-photo" src="images/member-xiaobai.jpg" alt="小白" style="object-position: center 85%">
-        <span style="position: absolute; top: 14px; right: 14px; background: #B42A23; color: #FFFFFF; font-size: 11.5px; font-weight: 900; padding: 3px 12px; border-radius: 999px; border: 2px solid #222222">MASCOT</span>
+        <div class="m-frame"><img class="m-photo" src="images/member-xiaobai.jpg" alt="小白" style="object-position: center 85%"></div>
+        <span class="m-badge" style="position: absolute; top: 14px; right: 14px; background: #B42A23; color: #FFFFFF; font-size: 11.5px; font-weight: 900; padding: 3px 12px; border-radius: 999px; border: 2px solid #222222">MASCOT</span>
         <div style="padding: 18px 22px 22px">
           <p class="m-name">小白</p>
           <p class="m-role" style="display: flex; align-items: center; gap: 6px">研究室吉祥物 <img src="images/paw.svg" alt="" aria-hidden="true" style="width: 14px; height: 14px"></p>
@@ -421,45 +430,8 @@ body.modal-open{overflow:hidden}
   </div>
 </section>
 
-<!-- GRANTS -->
-<section id="grants" class="sec" style="background: #FFFFFF; border-top: 2px solid #222222; border-bottom: 2px solid #222222">
-  <div class="wrap">
-    <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">研究計畫</div>
-    <h2 class="title" style="margin-bottom: 32px">Projects</h2>
-    <div class="card" style="overflow-x: auto; padding: 8px 18px">
-      <table class="g-table">
-        <thead>
-          <tr>
-            <th>期間</th>
-            <th>計畫名稱</th>
-            <th>補助單位</th>
-            <th style="text-align: center">角色</th>
-            <th style="text-align: right; display: none">補助金額</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="color: #5E5A55; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700">2026/1–2026/12</td>
-            <td style="font-weight: 700">常見感染症開立抗生素之風險效益評估 <span style="font-size: 12px; color: #B42A23; font-weight: 900">1/3</span></td>
-            <td style="color: #5E5A55; white-space: nowrap">國防醫學研究</td>
-            <td style="text-align: center"><span class="pi-tag">PI</span></td>
-            <td style="text-align: right; display: none">NT$ 440,000</td>
-          </tr>
-          <tr>
-            <td style="color: #5E5A55; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700">2025/2–2025/3</td>
-            <td style="font-weight: 700">邀請曼徹斯特大學 Prof. Tjeerd van Staa 來臺學術訪問<br><span style="font-size: 12px; color: #5E5A55; font-weight: 400">補助編號 114-2912-I-016-505</span></td>
-            <td style="color: #5E5A55; white-space: nowrap">國家科學及技術委員會</td>
-            <td style="text-align: center"><span class="pi-tag">PI</span></td>
-            <td style="text-align: right; display: none">NT$ 21,818</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
 <!-- PUBLICATIONS -->
-<section id="publications" class="sec">
+<section id="publications" class="sec" style="background: #FFFFFF; border-top: 2px solid #222222; border-bottom: 2px solid #222222">
   <div class="wrap">
     <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">發表論文</div>
     <h2 class="title">Research output</h2>
@@ -475,7 +447,7 @@ body.modal-open{overflow:hidden}
           <p class="journal">Antibiotics (Basel) 13(6):566 (2024) · IF 4.3 · PHARMACOLOGY &amp; PHARMACY, Q1, 74/354</p>
           <div class="tags">
             <span class="tag">COVID-19</span><span class="tag">OpenSAFELY</span><span class="tag">Antibiotic Exposure</span><span class="tag">Hospitalisation</span>
-            <a class="scite" href="https://scite.ai/reports/10.3390/antibiotics13060566" target="_blank" rel="noopener">scite ↗</a>
+            <a class="scite" href="https://scite.ai/reports/10.3390/antibiotics13060566" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -489,8 +461,8 @@ body.modal-open{overflow:hidden}
             <span class="tag">Repeated Exposure</span><span class="tag">COVID-19 Mortality</span><span class="tag">Case-Control</span><span class="tag">OpenSAFELY</span>
           </div>
           <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
-            <a class="press" href="https://www.manchester.ac.uk/about/news/study-links-overuse-of-antibiotics-with-severe-covid-19-side-effects/" target="_blank" rel="noopener">University of Manchester 媒體報導 ↗</a>
-            <a class="scite" style="margin-top: 10px" href="https://scite.ai/reports/10.1016/j.eclinm.2023.102064" target="_blank" rel="noopener">scite ↗</a>
+            <a class="press" href="https://www.manchester.ac.uk/about/news/study-links-overuse-of-antibiotics-with-severe-covid-19-side-effects/" target="_blank" rel="noopener">University of Manchester 媒體報導<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
+            <a class="scite" style="margin-top: 10px" href="https://scite.ai/reports/10.1016/j.eclinm.2023.102064" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -502,7 +474,7 @@ body.modal-open{overflow:hidden}
           <p class="journal">Antimicrobial Resistance &amp; Infection Control 12, 102 (2023) · IF 5.5 · PUBLIC, ENVIRONMENTAL &amp; OCCUPATIONAL HEALTH, Q1, 69/400</p>
           <div class="tags">
             <span class="tag">Primary Care</span><span class="tag">Antibiotic Prescribing</span><span class="tag">England</span><span class="tag">Pandemic Impact</span>
-            <a class="scite" href="https://scite.ai/reports/10.1186/s13756-023-01280-6" target="_blank" rel="noopener">scite ↗</a>
+            <a class="scite" href="https://scite.ai/reports/10.1186/s13756-023-01280-6" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -540,7 +512,7 @@ body.modal-open{overflow:hidden}
           <p class="journal">PLoS ONE 19(12):e0311515 (2024) · IF 2.9 · MULTIDISCIPLINARY SCIENCES, Q1, 33/135</p>
           <div class="tags">
             <span class="tag">Hospital Admission</span><span class="tag">Common Infections</span><span class="tag">OpenSAFELY</span>
-            <a class="scite" href="https://scite.ai/reports/10.1371/journal.pone.0311515" target="_blank" rel="noopener">scite ↗</a>
+            <a class="scite" href="https://scite.ai/reports/10.1371/journal.pone.0311515" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -552,7 +524,7 @@ body.modal-open{overflow:hidden}
           <p class="journal">The Lancet Regional Health – Europe 30, 100653 (2023) · IF 20.9 · HEALTH CARE SCIENCES &amp; SERVICES, Q1, 1/168</p>
           <div class="tags">
             <span class="tag">Lancet</span><span class="tag">Time-Series</span><span class="tag">Deprivation</span><span class="tag">OpenSAFELY</span>
-            <a class="scite" href="https://scite.ai/reports/10.1016/j.lanepe.2023.100653" target="_blank" rel="noopener">scite ↗</a>
+            <a class="scite" href="https://scite.ai/reports/10.1016/j.lanepe.2023.100653" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -564,13 +536,50 @@ body.modal-open{overflow:hidden}
           <p class="journal">Journal of Infection 87(1):1–11 (2023) · IF 28.2 · INFECTIOUS DISEASES, Q1, 4/129</p>
           <div class="tags">
             <span class="tag">Risk Prediction</span><span class="tag">Repeat Prescribing</span><span class="tag">England</span>
-            <a class="scite" href="https://scite.ai/reports/10.1016/j.jinf.2023.05.010" target="_blank" rel="noopener">scite ↗</a>
+            <a class="scite" href="https://scite.ai/reports/10.1016/j.jinf.2023.05.010" target="_blank" rel="noopener">scite<svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
     </div>
 
-    <a href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 32px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 2px solid #222222; background: #FFFFFF; color: #222222; font-weight: 800; font-size: 14px; text-decoration: none; box-shadow: 4px 4px 0 #222222">↗ 查看完整論文清單（ResearchGate）</a>
+    <a class="more-btn" href="https://www.researchgate.net/profile/Ya-Ting-Yang-8" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 32px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 2px solid #222222; background: #FFFFFF; color: #222222; font-weight: 800; font-size: 14px; text-decoration: none"><svg class="ext" viewBox="0 0 512 512" aria-hidden="true"><use href="#i-arrow"/><use href="#i-arrow"/></svg>查看完整論文清單（ResearchGate）</a>
+  </div>
+</section>
+
+<!-- GRANTS -->
+<section id="grants" class="sec">
+  <div class="wrap">
+    <div class="label"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQgMjIgMjUyIDE4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik03MCA0MCBDMTEwIDI2IDE1MCAyNiAxOTAgNDAgQzIyNSAzOCAyNTIgNjAgMjUwIDkyIEMyNDggMTE4IDIzMiAxMzIgMjE0IDEyOCBMMjEwIDE3NiBDMjEwIDE5MCAyMDAgMTk2IDE4NiAxOTYgTDc0IDE5NiBDNjAgMTk2IDUwIDE5MCA1MCAxNzYgTDQ2IDEyOCBDMjggMTMyIDEyIDExOCAxMCA5MiBDOCA2MCAzNSAzOCA3MCA0MCBaIiBmaWxsPSIjRkZGRkZGIi8+CjxjaXJjbGUgY3g9IjEwMiIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxjaXJjbGUgY3g9IjE1OCIgY3k9IjEwNCIgcj0iOSIgZmlsbD0iIzIyMjIyMiIgc3Ryb2tlPSJub25lIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSIxMDgiIHJ4PSIxMiIgcnk9IjkiIGZpbGw9IiMyMjIyMjIiIHN0cm9rZT0ibm9uZSIvPgo8cGF0aCBkPSJNMTMwIDExNiBMMTMwIDEyNCBNMTA4IDExOCBRMTE5IDEzNiAxMzAgMTI0IFExNDEgMTM2IDE1MiAxMTgiLz4KPC9zdmc+Cg==" alt="" aria-hidden="true">研究計畫</div>
+    <h2 class="title" style="margin-bottom: 32px">Projects</h2>
+    <div class="card" style="overflow-x: auto; padding: 8px 18px">
+      <table class="g-table">
+        <thead>
+          <tr>
+            <th>期間</th>
+            <th>計畫名稱</th>
+            <th>補助單位</th>
+            <th style="text-align: center">角色</th>
+            <th style="text-align: right; display: none">補助金額</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: #5E5A55; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700">2026/1–2026/12</td>
+            <td style="font-weight: 700">常見感染症開立抗生素之風險效益評估 <span style="font-size: 12px; color: #B42A23; font-weight: 900">1/3</span></td>
+            <td style="color: #5E5A55; white-space: nowrap">國防醫學研究</td>
+            <td style="text-align: center"><span class="pi-tag">PI</span></td>
+            <td style="text-align: right; display: none">NT$ 440,000</td>
+          </tr>
+          <tr>
+            <td style="color: #5E5A55; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700">2025/2–2025/3</td>
+            <td style="font-weight: 700">邀請曼徹斯特大學 Prof. Tjeerd van Staa 來臺學術訪問<br><span style="font-size: 12px; color: #5E5A55; font-weight: 400">補助編號 114-2912-I-016-505</span></td>
+            <td style="color: #5E5A55; white-space: nowrap">國家科學及技術委員會</td>
+            <td style="text-align: center"><span class="pi-tag">PI</span></td>
+            <td style="text-align: right; display: none">NT$ 21,818</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -788,8 +797,24 @@ body.modal-open{overflow:hidden}
 
 </div>
 <script>
-function openModal(k){var m=document.getElementById('modal-'+k);if(!m)return;closeModal();m.hidden=false;document.body.classList.add('modal-open');var b=m.querySelector('.a-close');if(b)b.focus();}
-function closeModal(){document.querySelectorAll('.overlay').forEach(function(m){m.hidden=true;});document.body.classList.remove('modal-open');}
+var modalOpener=null;
+function hideOverlay(m){if(m._done){clearTimeout(m._done.t);m.removeEventListener('animationend',m._done);m._done=null;}m.classList.remove('m-closing');m.hidden=true;}
+function openModal(k){var m=document.getElementById('modal-'+k);if(!m)return;document.querySelectorAll('.overlay').forEach(hideOverlay);modalOpener=document.activeElement;m.hidden=false;document.body.classList.add('modal-open');var b=m.querySelector('.a-close');if(b)b.focus();}
+/* 關閉：motion.css 有退場動畫就播完再隱藏，沒有（或減少動態）就立刻隱藏；焦點還給開啟彈窗的按鈕 */
+function closeModal(){
+  var open=[].filter.call(document.querySelectorAll('.overlay'),function(m){return !m.hidden&&!m.classList.contains('m-closing');});
+  if(!open.length)return;
+  document.body.classList.remove('modal-open');
+  open.forEach(function(m){
+    m.classList.add('m-closing');
+    if(getComputedStyle(m).animationName==='none')return hideOverlay(m);
+    var done=function(e){if(!e||e.target===m)hideOverlay(m);};
+    done.t=setTimeout(done,600);m._done=done;
+    m.addEventListener('animationend',done);
+  });
+  if(modalOpener&&modalOpener.focus)modalOpener.focus({preventScroll:true});
+  modalOpener=null;
+}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
 </script>
 <script>
@@ -804,5 +829,6 @@ window.addEventListener('resize',upd);
 upd();
 })();
 </script>
+<script src="motion.js" onerror="document.documentElement.classList.remove('motion')"></script>
 </body>
 </html>
